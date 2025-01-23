@@ -17,7 +17,7 @@ function Slider() {
                             <div className="col-md-6 col-sm-12">
                                 <div className="slide-des">
                                     <h4 className="text-white fade-in" style={{ fontWeight: '400' }}>JEWELLERS</h4>
-                                    <h2 className="text-white scale-up">THANAPAL JEWELLERS</h2>
+                                    <h2 className="text-white scale-up">Dhanapal Jewellers JEWELLERS</h2>
                                     <h3 className="text-white bounce-in">SHOP</h3>
                                 </div>
                             </div>
@@ -31,7 +31,7 @@ function Slider() {
                             <div className="col-md-6 col-sm-12">
                                 <div className="slide-des">
                                     <h4 className="text-white fade-in" style={{ fontWeight: '400' }}>JEWELLERS</h4>
-                                    <h2 className="text-white scale-up">THANAPAL JEWELLERS</h2>
+                                    <h2 className="text-white scale-up">Dhanapal Jewellers JEWELLERS</h2>
                                     <h3 className="text-white bounce-in">SHOP</h3>
                                 </div>
                             </div>

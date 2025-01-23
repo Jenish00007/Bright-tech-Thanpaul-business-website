@@ -60,7 +60,7 @@ export default function Header() {
           </div>
           <div className="logoContatiner" onClick={()=>{navigate('/')}}>
             <img src="./assets/logo.png" alt="" style={{width:'50px',height:'auto',display:'flex'}}/>
-              <h2>THANAPAL</h2>
+              <h2>Dhanapal Jewellers</h2>
               {/* <p> Jewelry House</p> */}
             
           </div>
@@ -72,12 +72,12 @@ export default function Header() {
           <NavLink to="contact">
             <li className="NavItem">Contact</li>
           </NavLink>
-          <NavLink to="TermsAndConditions">
+          {/* <NavLink to="TermsAndConditions">
               <li>Termsandcondition</li>
             </NavLink>
             <NavLink to="CancellationPolicy">
               <li>Cancellationpolicy</li>
-            </NavLink>
+            </NavLink> */}
 
           {/* <span className="search" >
             {isSearchclicked ? (
@@ -161,12 +161,12 @@ export default function Header() {
             <NavLink to="contact">
               <li onClick={handleMenu}>CONTACT</li>
             </NavLink>
-            <NavLink to="TermsAndConditions">
+            {/* <NavLink to="TermsAndConditions">
               <li onClick={handleMenu}>TERMSANDCONDITIONS</li>
             </NavLink>
             <NavLink to="CancellationPolicy">
               <li onClick={handleMenu}>CANCELLATIONPOLICY</li>
-            </NavLink>
+            </NavLink> */}
 
             {/* <li>
               <select

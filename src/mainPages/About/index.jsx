@@ -5,7 +5,7 @@ export default function About() {
     <><div className="aboutPage">
       <section className="heading">
        <div className='text'>
-         <small>A few Words...</small>
+         {/* <small>A few Words...</small> */}
         <h1>About Us</h1>
        </div>
        
@@ -13,7 +13,7 @@ export default function About() {
       {/* <section className="aboutFounder">
         <img src="\assets\shop.png" alt="model Photo" width="300px"/>
         <div className='textContent'>
-          <h5>THANAPAL JEWELLERS</h5>
+          <h5>Dhanapal Jewellers JEWELLERS</h5>
           <h3>About the Founder</h3>
           <h4>
           Similique libero quaerat

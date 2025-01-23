@@ -69,7 +69,7 @@ export default function Contact() {
               name="story"
               rows="5"
               cols="15"
-              placeholder="I recently had the pleasure of discovering Thanapal jwellery..."
+              placeholder="I recently had the pleasure of discovering Dhanapal Jewellers jwellery..."
             ></textarea>
 
             <button

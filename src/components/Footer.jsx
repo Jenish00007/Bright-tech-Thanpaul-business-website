@@ -79,7 +79,7 @@ const Footer = () => {
       <div style={topSectionStyle}>
         {/* Left Section */}
         <div style={columnStyle}>
-          <h3 style={{ color: " rgb(247, 239, 122)", fontWeight: "bold",fontfamily:"abel" }}>THANAPAL JEWELLARY</h3>
+          <h3 style={{ color: " rgb(247, 239, 122)", fontWeight: "bold",fontfamily:"abel" }}>Dhanapal Jewellers</h3>
           <p style={textStyle}>
             Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus,
             voluptate.
@@ -127,6 +127,11 @@ const Footer = () => {
             <li>
               <a href="/TermsAndCondition" style={linkStyle}>
                 Termsandcondition
+              </a>
+            </li>
+            <li>
+              <a href="/CancellationPolicy" style={linkStyle}>
+                Cancellation Policy
               </a>
             </li>
             <li>

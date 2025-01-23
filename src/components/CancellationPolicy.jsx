@@ -1,124 +1,62 @@
 import React from "react";
+import { styled } from "@mui/system";
+import { yellow } from "@mui/material/colors";
+
+const Container = styled("div")({
+  fontFamily: "Arial, sans-serif",
+  lineHeight: 1.6,
+  color: "rgb(252, 249, 252)",
+  padding: 20,
+  maxWidth: 800,
+  margin: "0 auto",
+});
+
+const Heading = styled("h1")({
+  fontSize: 24,
+  color: yellow[500],
+  fontWeight: "bold",
+  marginBottom: 10,
+});
+
+const Subheading = styled("h2")({
+  fontSize: 18,
+  color: yellow[500],
+  fontWeight: "bold",
+  marginTop: 20,
+  marginBottom: 10,
+});
+
+const Paragraph = styled("p")({
+  marginBottom: 15,
+});
 
 const CancellationPolicy = () => {
   return (
-    <div style={{ padding: "20px", fontFamily: "Arial, sans-serif" }}>
-      <h1 style={{ color: "#ffbf00", textAlign: "center", fontSize: "2.5rem" }}>
-        Cancellation Policy
-      </h1>
-      <p style={{ fontSize: "1rem", lineHeight: "1.8", color: "#555" }}>
-        Last Updated: January 11, 2025
-      </p>
+    <Container>
+      <Heading>Cancellation Policy</Heading>
+      <Paragraph>
+        We understand that plans may change, and cancellations may be necessary.
+      </Paragraph>
 
-      <section style={{ marginBottom: "20px" }}>
-        <h2
-          style={{
-            color: "#ff9900",
-            fontSize: "1.5rem",
-            marginBottom: "10px",
-            borderBottom: "2px solid #ffdd00",
-            paddingBottom: "5px",
-          }}
-        >
-          Introduction
-        </h2>
-        <p>
-          At thanapal jewellers, we value our customers and strive to provide the best
-          possible service. This Cancellation Policy outlines the conditions
-          under which cancellations can be made and any applicable fees.
-        </p>
-      </section>
+      <Subheading>Cancellation Requests</Subheading>
+      <Paragraph>
+        Cancellation requests must be submitted through our platform or by contacting our support team. Requests will be processed within 24-48 hours.
+      </Paragraph>
 
-      <section style={{ marginBottom: "20px" }}>
-        <h2
-          style={{
-            color: "#ff9900",
-            fontSize: "1.5rem",
-            marginBottom: "10px",
-            borderBottom: "2px solid #ffdd00",
-            paddingBottom: "5px",
-          }}
-        >
-          Cancellation Terms
-        </h2>
-        <ul style={{ paddingLeft: "20px", color: "ff9900" }}>
-          <li>
-            Cancellations must be made at least 48 hours before the scheduled
-            service or delivery to avoid charges.
-          </li>
-          <li>
-            If a cancellation is made within 48 hours of the scheduled time, a
-            cancellation fee of 20% of the total amount will be charged.
-          </li>
-          <li>No-shows or same-day cancellations are non-refundable.</li>
-        </ul>
-      </section>
+      <Subheading>Refunds</Subheading>
+      <Paragraph>
+        Refund eligibility is subject to the terms outlined in our agreement. Refunds will be issued to the original payment method within 5-7 business days.
+      </Paragraph>
 
-      <section style={{ marginBottom: "20px" }}>
-        <h2
-          style={{
-            color: "#ff9900",
-            fontSize: "1.5rem",
-            marginBottom: "10px",
-            borderBottom: "2px solidrgb(208, 0, 255)",
-            paddingBottom: "5px",
-          }}
-        >
-          Refund Process
-        </h2>
-        <p>
-          Refunds, if applicable, will be processed within 7-10 business days
-          after the cancellation request is approved. Refunds will be made using
-          the original payment method.
-        </p>
-      </section>
+      <Subheading>Non-Refundable Scenarios</Subheading>
+      <Paragraph>
+        Certain scenarios, such as last-minute cancellations or specific bookings, may not qualify for a refund. Please review our terms for details.
+      </Paragraph>
 
-      <section style={{ marginBottom: "20px" }}>
-        <h2
-          style={{
-            color: "#ff9900",
-            fontSize: "1.5rem",
-            marginBottom: "10px",
-            borderBottom: "2px solid #ffdd00",
-            paddingBottom: "5px",
-          }}
-        >
-          Exceptions
-        </h2>
-        <p>
-          Certain products or services may not be eligible for cancellation or
-          refund due to their nature. These will be clearly indicated at the
-          time of purchase.
-        </p>
-      </section>
-
-      <section style={{ marginBottom: "20px" }}>
-        <h2
-          style={{
-            color: "#ff9900",
-            fontSize: "1.5rem",
-            marginBottom: "10px",
-            borderBottom: "2px solid #ffdd00",
-            paddingBottom: "5px",
-          }}
-        >
-          Contact Us
-        </h2>
-        <p>
-          If you have any questions or need assistance with cancellations,
-          please contact us at:
-        </p>
-        <p>
-          <strong>Email:</strong> cancellations@thanapal jewellers.com
-        </p>
-        <p>
-          <strong>Phone:</strong> +123 456 7890
-        </p>
-        <p>
-          <strong>Address:</strong> 123 thanapal jewellers 
-        </p>
-      </section>
-    </div>
+      <Paragraph>
+        If you have questions about our Cancellation Policy, feel free to contact us.
+      </Paragraph>
+    </Container>
   );
 };
 

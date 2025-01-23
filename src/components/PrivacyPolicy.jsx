@@ -14,12 +14,14 @@ const PrivacyPolicy = () => {
 
   const headingStyle = {
     fontSize: "24px",
+    color:"yellow",
     fontWeight: "bold",
     marginBottom: "10px",
   };
 
   const subheadingStyle = {
     fontSize: "18px",
+    color:"yellow",
     fontWeight: "bold",
     marginTop: "20px",
     marginBottom: "10px",

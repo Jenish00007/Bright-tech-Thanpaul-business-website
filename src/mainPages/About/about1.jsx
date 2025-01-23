@@ -6,14 +6,13 @@ export default function AboutFounder() {
     <section className="aboutFounder">
       <img src="\assets\shop.png" alt="Founder Photo" width="300px" />
       <div className="textContent">
-        <h5>THANAPAL JEWELLERS</h5>
+        <h5>Dhanapal Jewellers</h5>
         <h3>About the Founder</h3>
         <h4>
-          Similique libero quaerat exercitationem delectus ipsum, maiores unde sit amet consectetur adipisicing elit. Expedita, quod!
+        NK Dhanapal Jewellers is a jewelry store located at 10-L, Duraisamy Naidu Street, Dharmapuri, Tamil Nadu 636701, India. 
         </h4>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error hic quae dicta rerum! Vitae dolor sit similique libero quaerat exercitationem delectus ipsum, maiores unde accusantium natus quos nostrum possimus autem a maxime fugit sunt repellat incidunt deserunt molestiae cupiditate omnis? Est excepturi adipisci corporis non magni asperiores distinctio eius nulla.
-        </p>
+        For a broader selection of jewelry options in Dharmapuri, other notable jewelers include Sahana Jewellers, Malabar Gold and Diamond Jewellers, STS Jewellery, Tanishq, and Sivaraj.         </p>
         
       </div>
     </section>
