@@ -66,6 +66,9 @@ export default function Header() {
           </div>
         </div>
         <div className="navbarIcons">
+          <NavLink to="/" >
+            <li className="NavItem">Home</li>
+          </NavLink>
           <NavLink to="/about" >
             <li className="NavItem">About</li>
           </NavLink>

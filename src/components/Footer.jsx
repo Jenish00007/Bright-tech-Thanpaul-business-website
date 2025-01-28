@@ -81,8 +81,7 @@ const Footer = () => {
         <div style={columnStyle}>
           <h3 style={{ color: " rgb(247, 239, 122)", fontWeight: "bold",fontfamily:"abel" }}>Dhanapal Jewellers</h3>
           <p style={textStyle}>
-            Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus,
-            voluptate.
+          NK Dhanapal Jewellers is a jewelry store located at 10-L, Duraisamy Naidu Street, Dharmapuri, Tamil Nadu 636701, India.
           </p>
           <p style={textStyle}>
             📍 TamilNadu<br />
@@ -132,6 +131,11 @@ const Footer = () => {
             <li>
               <a href="/CancellationPolicy" style={linkStyle}>
                 Cancellation Policy
+              </a>
+            </li>
+            <li>
+              <a href="/RefundPolicy" style={linkStyle}>
+                Refund Policy
               </a>
             </li>
             <li>

@@ -1,0 +1,73 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --background-color: #f4f6f7;
+    --text-color: #34495e;
+  }
+  
+  .refund-container {
+    max-width: 800px;
+    margin:200px auto;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    animation: pageLoad 1s ease-out;
+  }
+  
+  @keyframes pageLoad {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .refund-container h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    animation: textReveal 1.5s ease;
+  }
+  
+  .refund-section {
+    margin-bottom: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .refund-content{
+    color: black;
+  }
+  
+  .refund-header {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .refund-header:hover {
+    background-color: var(--secondary-color);
+    color: white;
+  }
+  
+  .refund-content {
+    padding: 20px;
+    background-color: white;
+    animation: contentSlideIn 0.5s ease;
+  }
+  
+  @keyframes contentSlideIn {
+    from {
+      opacity: 0;
+      max-height: 0;
+    }
+    to {
+      opacity: 1;
+      max-height: 500px;
+    }
+  }

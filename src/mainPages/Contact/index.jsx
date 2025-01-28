@@ -3,6 +3,7 @@ import {toast} from 'react-toastify'
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import EmailTwoToneIcon from "@mui/icons-material/EmailTwoTone";
 import LocalPhoneRoundedIcon from "@mui/icons-material/LocalPhoneRounded";
+import ContactForm from "../../components/ContactForm/ContactForm";
 export default function Contact() {
   return (
     <section className="contactPage">
@@ -40,7 +41,7 @@ export default function Contact() {
             </p>
           </p>
         </div>
-        <div className="contactForm">
+        {/* <div className="contactForm">
           <form
             action="https://formsubmit.co/jaianushka1056@gmail.com"
             method="POST"
@@ -84,7 +85,11 @@ export default function Contact() {
               Send
             </button>
           </form>
+        </div> */}
+        <div className="contactForm">
+        <ContactForm/>
         </div>
+        
       </div>
 
       <iframe

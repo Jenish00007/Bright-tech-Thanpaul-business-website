@@ -1,7 +1,7 @@
 .aboutPage .heading {
   height: 66vh;
   width: 100%;
-  background: url(/public/assets/shop1.png);
+  background: url(/public/assets/bg.jpeg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -26,8 +26,8 @@
 
 .aboutPage .heading .text h1{
   margin-top: 0;
-  color: black;
-  font-weight: bolder;
+  color: white;
+  /* font-weight: bolder; */
 }
 
 .aboutFounder .textContent {

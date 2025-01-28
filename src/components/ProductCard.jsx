@@ -49,7 +49,7 @@ export default function ProductCard({ item, inWishlist }) {
           <span title={product_isBadge} className="trendingIcon">
             {product_isBadge.length > 0 ? (
               <div className="ribbon ribbon-top-left">
-                <span>{product_isBadge}</span>
+                <span className="badge">{product_isBadge}</span>
               </div>
             ) : null}
           </span>

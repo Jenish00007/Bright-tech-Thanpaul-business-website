@@ -9,7 +9,8 @@ import AboutFounder from '../About/about1.jsx';
 import Slider from "../../mainPages/Home/slider/Slider.jsx";
 import Why from "../../components/why.jsx";
 import { useData } from '../../';
-import Image1 from "../../mainPages/image/image.jsx";
+import ServicesPage from '../../components/Services/Services.jsx';
+import Blog from "../../components/Blog/Blog.jsx";
 
 export default function Home() {
   const { backendData, categoriesData, setFiltersUsed } = useData();
@@ -27,12 +28,12 @@ export default function Home() {
 
       <section className="trending" data-aos="fade-up">
         <p>Popular Products</p>
-        <h3>TRENDING NOW</h3>
+        <h3>TRENDING NOW</h3><br/><br/>
         <div className="productsContainer">
           {trendingArray.slice(0, 6).map((item) => <ProductCard key={item.id} item={item} />)}
         </div>
       </section>
-
+<br/>
       <section className="showOff" data-aos="fade-down">
         <div className="textContent">
           <p>Unique Pieces</p>
@@ -49,7 +50,7 @@ export default function Home() {
           <img className="smallImage" src='\assets\hands.jpg' alt="" height="200px" />
         </div>
       </section>
-
+     
       <section className="ShopByCategory" data-aos="fade-up">
         <h3>SHOP BY CATEGORY</h3>
         <p>Browse through your favorite categories. we have got them all!</p>
@@ -102,8 +103,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
-<AboutFounder></AboutFounder>
+      </section>  
+     < ServicesPage/>
+     <AboutFounder/>
+     <Blog/>
       {/* <ImageSlider /> */}
     </>
   );

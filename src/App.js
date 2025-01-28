@@ -25,11 +25,13 @@ import ShoppingCart from "./mainPages/Cart/cartComponents/ShoppingCart";
 import OrderComplete from "./mainPages/Cart/cartComponents/OrdersComplete";
 import Contact from "./mainPages/Contact/index";
 import { useAuth } from "./context/AuthContext";
-import ScrollToTop from "./components/ScrollUp";
+// import ScrollToTop from "./components/ScrollUp";
 import ImageSlider from "./components/imageslider";
-import TermsAndConditions from "./components/TermsAndConditions";
-import CancellationPolicy from "./components/CancellationPolicy";
-import PrivacyPolicy from "./components/PrivacyPolicy";
+import TermsAndConditions from "../src/components/Terms And Conditions/Terms_And_Conditions";
+import CancellationPolicy from "../src/components/CancellationPolicy/CancellationPolicy";
+import PrivacyPolicy from "../src/components/PrivacyPolicy/PrivacyPolicy";
+import RefundPolicy from "../src/components/RefundPolicy/RefundPolicy";
+
 
 function App() {
   const { token } = useAuth();
@@ -37,17 +39,18 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <ScrollToTop />
+      {/* <ScrollToTop /> */}
 
       <div className="mainApp">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home />}/>
           {/* <Route path="/mockman" element={<MockApi />} /> */}
-          <Route path="/about" element={<About />} />
-          <Route path="/TermsAndConditions" element={<TermsAndConditions />} />
-          <Route path="/CancellationPolicy" element={<CancellationPolicy />}/>
-          <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />.
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />}/>
+          <Route path="TermsAndCondition" element={<TermsAndConditions/>}/>
+          <Route path="/CancellationPolicy" element={<CancellationPolicy/>}/>
+          <Route path="/PrivacyPolicy" element={<PrivacyPolicy/>}/>
+          <Route path="/RefundPolicy" element={<RefundPolicy/>}/>
+          <Route path="/contact" element={<Contact />}/>
           </Routes>
         {/* <Route
             path="/cart"

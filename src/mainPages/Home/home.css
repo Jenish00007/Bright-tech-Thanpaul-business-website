@@ -44,6 +44,7 @@ h4 {
 
 .trending {
   min-width: 100%;
+  margin-top: 50px;
 }
 
 .trending p {
@@ -64,12 +65,7 @@ h4 {
   font-size: 1rem;
 }
 
-.productsContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  padding: 10px;
-}
+
 
 .categoryBox {
   display: flex;
@@ -162,25 +158,43 @@ h4 {
   .home h3 {
     margin: 0;
   }
+  /* .productsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 10px;
+  }
 
   .productsContainer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     width: 100%;    
-    max-width:1200px;
+    max-width:1000px;
     margin:auto;
   
+  } */
+
+  .productsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+    gap: 15px; /* Slightly reduced gap */
+    padding: 10px;
+    width: 90%; /* Slightly smaller width */
+    max-width: 800px; /* Reduced max-width for a smaller container */
+    margin: 20px auto; /* Centered with some vertical spacing */
+    max-height: 600px;
   }
 
   .showOff {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    justify-content: space-around;
   }
 
   .showOff .textContent {
     width: 50%;
-    padding-left: 100px;
+    padding-left: 150px;
     z-index: 3;
   }
   .mainbutton button{
@@ -202,39 +216,43 @@ h4 {
   }
 
   .imageContent {
+    /* background-color: red; */
     display: flex;
     flex-direction: row-reverse;
   }
 
   .bigImage {
-    height: 600px;
+    height: 400px;
     width: 100%;
   }
 
   .smallImage {
     margin-left: -20px;
-    margin-top: 30%;
+    margin-top: 50%;
     right: -30px;
-    height: 400px;
+    height: 200px;
     z-index: 1;
     position: relative;
   }
 
   .middleImage {
-    width: 30%;
+    width: 20%;
     padding: 10px;
     border-radius: 1%;
   }
 
   .whyusContent {
     display: flex;
-    gap:3rem
+    gap:3rem;
+    /* background-color: greenyellow; */
+  padding-right:60 px;
+ 
   }
 
   .whyUsDescription {
     display: grid;
     grid-template-columns: 1fr 1fr;
-
+/* background-color: red; */
     align-items: center;
     gap: 10px;
   }
@@ -243,7 +261,10 @@ h4 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 5px;
+    /* padding: 5px; */
+    /* background-color: blue; */
+    height: 250px;
+    width: 500px;
   }
 
   .whyUsDescription p {
