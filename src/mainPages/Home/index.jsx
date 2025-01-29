@@ -14,6 +14,7 @@ import Blog from "../../components/Blog/Blog.jsx";
 import ZoomImage from '../About/about1.jsx';
 import Projects from '../../components/Projects/Projects.js';
 import Carousel from '../../components/Projects copy/Carousel.jsx';
+import WhyChooseUs from '../../components/Why Choose Us/WhyChooseUs.jsx';
 
 export default function Home() {
   const { backendData, categoriesData, setFiltersUsed } = useData();
@@ -80,7 +81,7 @@ export default function Home() {
           <img className="smallImage" src='\assets\hands.jpg' alt="" height="200px" />
         </div>
       </section>
-
+<div className="whyUswhole">
       <section className="whyUs" data-aos="fade-down">
         <p>BEST IN BUSINESS</p>
         <h3>Why Choose Us</h3>
@@ -89,27 +90,29 @@ export default function Home() {
           <div className="whyUsDescription">
             <div data-aos="fade-up" data-aos-delay="200">
               <img src="\assets\whyUsIcons\percent-solid.svg" alt="big discount" />
-              <h3>Big Discount</h3>
-              <p>We provide higher discounts without compromising on quality or craftsmanship. Our commitment to offering affordable prices allows you to indulge in your love for exquisite jewelry while enjoying significant savings.</p>
+              <h5>Big Discount</h5>
+              <p>We provide higher discounts without compromising on quality or craftsmanship. </p>
             </div>
             <div data-aos="fade-up" data-aos-delay="400">
               <img src="\assets\whyUsIcons\truck-fast-solid.svg" alt="fast delivery" />
-              <h3>Free Delivery</h3>
-              <p>With our Free delivery service, you can shop with confidence, knowing that there are no hidden fees or additional charges. Sit back, relax, and let us take care of delivering your exquisite jewelry directly to you.</p>
+              <h5>Free Delivery</h5>
+              <p>Enjoy free delivery with no hidden fees relax as we bring your exquisite jewelry straight to you!</p>
             </div>
             <div data-aos="fade-up" data-aos-delay="600">
               <img src="\assets\whyUsIcons\wallet-solid.svg" alt="big savings " />
-              <h3>Secure Payments</h3>
-              <p>We ensure your peace of mind throughout your shopping experience. Your financial security is of utmost importance to us, which is why we have implemented advanced encryption and secure payment gateways.</p>
+              <h5>Secure Payments</h5>
+              <p>We prioritize your security with advanced encryption and secure payment gateways for a worry-free shopping experience.</p>
             </div>
             <div data-aos="fade-up" data-aos-delay="800">
               <img src="\assets\whyUsIcons\boxes-packing-solid.svg" alt="big tracking order" />
-              <h3>Order Tracking</h3>
-              <p>We provide tracking order services, allowing you to stay informed and updated on the status of your purchase every step of the way. We ensure a seamless and transparent shopping experience.</p>
+              <h5>Order Tracking</h5>
+              <p>Stay updated with our order tracking for a seamless, transparent shopping experience.</p>
             </div>
           </div>
         </div>
       </section>  
+      </div>
+      {/* <WhyChooseUs/> */}
       
      < ServicesPage/>
      {/* <AboutFounder/> */}
