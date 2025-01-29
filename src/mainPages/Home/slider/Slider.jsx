@@ -4,6 +4,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 
 
+
 function Slider() {
     return (
         <div className="slider-container">
@@ -24,6 +25,8 @@ function Slider() {
                             <div className="slide-des">
                                 <h2 className="text-white scale-up">Dhanapal Jewellers</h2>
                                 <h3 className="text-white bounce-in">SHOP</h3>
+                                {/* <h2 className="text-white scale-up">{" "} <ReactTyped strings={["Dhanapal Jewellers"]} typeSpeed={100} loop /></h2> */}
+                                {/* <h3 className="text-white bounce-in">{" "} <ReactTyped strings={["SHOP"]} typeSpeed={400} loop /></h3> */}
                             </div>
                         </div>
                         <div className="col-md-6">
