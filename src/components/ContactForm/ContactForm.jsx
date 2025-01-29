@@ -42,18 +42,6 @@ const ContactForm = () => {
         
         <div className="form-group">
           <input 
-            type="email" 
-            name="email" 
-            value={formData.email}
-            onChange={handleChange}
-            placeholder="Email Address"
-            required 
-            className="form-input"
-          />
-        </div>
-        
-        <div className="form-group">
-          <input 
             type="tel" 
             name="phone" 
             value={formData.phone}

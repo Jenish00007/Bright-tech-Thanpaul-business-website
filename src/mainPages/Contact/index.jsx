@@ -15,9 +15,8 @@ export default function Contact() {
         <div className="textContent">
           <h3>Message Us</h3>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis
-            voluptates eos rerum quod nobis eaque consectetur incidunt deserunt
-            odio animi.
+            If you have any questions or inquiries, feel free to reach out to us.
+            We would love to hear from you and assist in any way we can.
           </p>
           <p className="location">
             <p>
@@ -41,51 +40,7 @@ export default function Contact() {
             </p>
           </p>
         </div>
-        {/* <div className="contactForm">
-          <form
-            action="https://formsubmit.co/jaianushka1056@gmail.com"
-            method="POST"
-          >
-            <input
-              type="hidden"
-              name="_next"
-              value="http://shringaar.netlify.app/contact"
-            />
-            <div className="name">
-              <input type="text" name="first_name" placeholder="First Name" required/>
-
-              <input type="text" name="last_name" placeholder="Last Name" required/>
-            </div>
-
-            <input
-              type="email"
-              name="email"
-              id="contactEmail"
-              placeholder="email Id"
-              required
-            />
-
-            <textarea
-              id="story"
-              name="story"
-              rows="5"
-              cols="15"
-              placeholder="I recently had the pleasure of discovering Dhanapal Jewellers jwellery..."
-            ></textarea>
-
-            <button
-              type="submit"
-              onClick={() => {
-                toast.success("Thank you for messaging us, Have a great Day ", {
-                  position: toast.POSITION.BOTTOM_RIGHT,
-                  className: "loginToast",
-                });
-              }}
-            >
-              Send
-            </button>
-          </form>
-        </div> */}
+       
         <div className="contactForm">
         <ContactForm/>
         </div>

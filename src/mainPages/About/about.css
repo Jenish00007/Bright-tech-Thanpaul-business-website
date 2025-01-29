@@ -31,7 +31,7 @@
 }
 
 .aboutFounder .textContent {
-  padding: 22px;
+  padding: 42px;
   text-align: left;
 }
 .aboutFounder .textContent p{
@@ -49,11 +49,12 @@
     flex-direction: row-reverse; 
     text-align: left;
     align-items: center;
+    margin-top: 100px;
   }
   
 .aboutFounder img{
   width: 40%;
-  padding-right: 5%;
+  padding: 5%;
   
 }
 }

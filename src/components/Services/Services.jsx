@@ -34,7 +34,7 @@ const ServicesPage = () => {
           <div key={index} className="service-card">
             {service.icon}
             <h3>{service.title}</h3>
-            <p>{service.description}</p>
+            {/* <p>{service.description}</p> */}
           </div>
         ))}
       </div>

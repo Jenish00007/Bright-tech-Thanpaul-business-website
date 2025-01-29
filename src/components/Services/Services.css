@@ -18,7 +18,7 @@
   } */
 
   .services-grid {
-    width: 200px;
+    width: 300px;
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* Ensures four columns for desktop view */
     gap: 1.5rem;

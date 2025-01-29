@@ -1,7 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { Calendar, User, Tag } from 'lucide-react';
+import { useState, useEffect, useRef, useLayoutEffect } from 'react';
+import { Calendar, User } from 'lucide-react';
 import './Blog.css';
-// import './Images/pic_1.webp';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+// Register the ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
 
 const blogPosts = [
   {
@@ -33,28 +37,34 @@ const blogPosts = [
   }
 ];
 
-const Blog = () => {
+const Blog = ({ scale = 4.5, duration = 1, ease = "power2.out" }) => {
   const [selectedTag, setSelectedTag] = useState(null);
-  const [observedPosts, setObservedPosts] = useState([]);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate');
-        }
+  // Create refs for each image
+  const imageRefs = useRef([]);
+
+  // GSAP animation for images on scroll
+  useLayoutEffect(() => {
+    blogPosts.forEach((post, index) => {
+      let ctx = gsap.context(() => {
+        gsap.from(imageRefs.current[index], {
+          scale: 1 / scale,
+          opacity: 0,
+          ease: ease,
+          duration: duration,
+          scrollTrigger: {
+            trigger: imageRefs.current[index],
+            scrub: 1, // Smooth scroll effect
+            start: "top 80%", // When the top of the image is 80% from the top of the viewport
+            end: "bottom 80%" // When the bottom of the image is 80% from the top of the viewport
+          }
+        });
       });
-    });
 
-    const blogCardElements = document.querySelectorAll('.blog-card');
-    blogCardElements.forEach((element) => {
-      observer.observe(element);
+      // Cleanup on unmount
+      return () => ctx.revert();
     });
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
+  }, [scale, duration, ease]);
 
   const filteredPosts = selectedTag
     ? blogPosts.filter((post) => post.tags.includes(selectedTag))
@@ -66,28 +76,15 @@ const Blog = () => {
     <div className="blog-container">
       <h1 className="blog-title">Jewelry Insights & Stories</h1>
       
-      {/* <div className="tag-filter">
-        <button
-          onClick={() => setSelectedTag(null)}
-          className={selectedTag === null ? 'active' : ''}
-        >
-          All Posts
-        </button>
-        {uniqueTags.map((tag) => (
-          <button
-            key={tag}
-            onClick={() => setSelectedTag(tag)}
-            className={selectedTag === tag ? 'active' : ''}
-          >
-            {tag}
-          </button>
-        ))}
-      </div> */}
-
       <div className="blog-grid">
-        {filteredPosts.map((post) => (
+        {filteredPosts.map((post, index) => (
           <div key={post.id} className="blog-card">
-            <img src={post.image} alt={post.title} className="blog-image" />
+            <img 
+              ref={(el) => imageRefs.current[index] = el} // Assign refs dynamically
+              src={post.image} 
+              alt={post.title} 
+              className="blog-image" 
+            />
             <div className="blog-content">
               <h2 className="blog-post-title">{post.title}</h2>
               <div className="blog-meta">
@@ -99,8 +96,7 @@ const Blog = () => {
                   <span key={tag} className="tag">{tag}</span>
                 ))}
               </div>
-              <p className="blog-excerpt">{post.excerpt}</p>
-              {/* <button className="read-more">Read More</button> */}
+              {/* <p className="blog-excerpt">{post.excerpt}</p> */}
             </div>
           </div>
         ))}

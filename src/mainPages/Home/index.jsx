@@ -11,6 +11,8 @@ import Why from "../../components/why.jsx";
 import { useData } from '../../';
 import ServicesPage from '../../components/Services/Services.jsx';
 import Blog from "../../components/Blog/Blog.jsx";
+import ZoomImage from '../About/about1.jsx';
+import Projects from '../../components/Projects/Projects.js';
 
 export default function Home() {
   const { backendData, categoriesData, setFiltersUsed } = useData();
@@ -29,27 +31,13 @@ export default function Home() {
       <section className="trending" data-aos="fade-up">
         <p>Popular Products</p>
         <h3>TRENDING NOW</h3><br/><br/>
-        <div className="productsContainer">
+        <Projects/>
+        {/* <div className="productsContainer">
           {trendingArray.slice(0, 6).map((item) => <ProductCard key={item.id} item={item} />)}
-        </div>
+        </div> */}
       </section>
 <br/>
-      <section className="showOff" data-aos="fade-down">
-        <div className="textContent">
-          <p>Unique Pieces</p>
-          <h3>BE ALWAYS ON TREND</h3>
-          <p >We take immense pride in offering jewelry pieces that are crafted with the utmost care and attention to detail. Each item in our collection undergoes rigorous quality checks to ensure it meets our high standards</p>
-          <div className="mainbutton">
-            {/* <NavLink to='/browse'>
-              <button>Shop Now</button>
-            </NavLink> */}
-          </div>
-        </div>
-        <div className="imageContent">
-          <img className="bigImage" src='\assets\model2.jpg' width="400px" />
-          <img className="smallImage" src='\assets\hands.jpg' alt="" height="200px" />
-        </div>
-      </section>
+    
      
       <section className="ShopByCategory" data-aos="fade-up">
         <h3>SHOP BY CATEGORY</h3>
@@ -72,6 +60,23 @@ export default function Home() {
               <p>{categoryName}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="showOff" data-aos="fade-down">
+        <div className="textContent">
+          <p>Unique Pieces</p>
+          <h3>BE ALWAYS ON TREND</h3>
+          <p >We take immense pride in offering jewelry pieces that are crafted with the utmost care and attention to detail. Each item in our collection undergoes rigorous quality checks to ensure it meets our high standards</p>
+          <div className="mainbutton">
+            {/* <NavLink to='/browse'>
+              <button>Shop Now</button>
+            </NavLink> */}
+          </div>
+        </div>
+        <div className="imageContent">
+          <img className="bigImage" src='\assets\model2.jpg' width="400px" />
+          <img className="smallImage" src='\assets\hands.jpg' alt="" height="200px" />
         </div>
       </section>
 
@@ -104,8 +109,10 @@ export default function Home() {
           </div>
         </div>
       </section>  
+      
      < ServicesPage/>
-     <AboutFounder/>
+     {/* <AboutFounder/> */}
+    <ZoomImage/>
      <Blog/>
       {/* <ImageSlider /> */}
     </>
