@@ -13,6 +13,7 @@ import ServicesPage from '../../components/Services/Services.jsx';
 import Blog from "../../components/Blog/Blog.jsx";
 import ZoomImage from '../About/about1.jsx';
 import Projects from '../../components/Projects/Projects.js';
+import Carousel from '../../components/Projects copy/Carousel.jsx';
 
 export default function Home() {
   const { backendData, categoriesData, setFiltersUsed } = useData();
@@ -27,7 +28,7 @@ export default function Home() {
   return (
     <>
       <Slider />
-
+{/* <Carousel/> */}
       <section className="trending" data-aos="fade-up">
         <p>Popular Products</p>
         <h3>TRENDING NOW</h3><br/><br/>
