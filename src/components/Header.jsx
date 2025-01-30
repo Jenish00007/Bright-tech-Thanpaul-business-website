@@ -4,6 +4,7 @@ import { useData } from "../";
 import Rate from "./rate";
 import { FaRegMoneyBillAlt } from 'react-icons/fa';
 import { ReactTyped } from 'react-typed';
+import GoldRateDropdown from "./GoldRateDropdown/GoldRateDropdown";
 
 export default function Header() {
   const [isMenuClicked, setIsMenuClicked] = useState(false);
@@ -52,6 +53,9 @@ export default function Header() {
 
           </div>
         </div>
+        <div className="GoldRateCointainer">
+        <GoldRateDropdown/>
+        </div>
         <div className="navbarIcons">
 
           <NavLink to="home">
@@ -63,65 +67,9 @@ export default function Header() {
           <NavLink to="contact">
             <li className="NavItem">Contact</li>
           </NavLink>
-          {/* <Rate/> */}
-          <li
-            className="NavItem"
-            onMouseEnter={() => setIsHovered(true)} // On hover start
-            onMouseLeave={() => setIsHovered(false)} // On hover end
-            style={{
-              position: "relative",
-              cursor: "pointer",
-              display: "flex",
-              alignItems: "center",
-              backgroundColor: "#FFD700", 
-              padding: "5px 5px", 
-              borderRadius: "5px" 
-            }}
-          >
-            <i className="fa fa-calendar" style={{ marginRight: "8px" }}></i>
-            Today's Rate
-          </li>
-
-
-          {isHovered && (
-            <div
-              className="rate-component-container"
-              style={{
-                opacity: isHovered ? 1 : 0,
-                transform: isHovered
-                  ? isMobile
-                    ? "translateX(0px)"
-                    : "translateX(100px)"
-                  : "translateX(1000px)",
-                transition: "opacity 0.3s ease, transform 0.3s ease",
-                position: "absolute",
-                top: "100%",
-                left: "0",
-                marginLeft: isMobile ? "0px" : "900px", // Adjust margin based on screen size
-              }}
-            >
-              <Rate />
-            </div>
-          )}
-
         </div>
       </div>
-      {isMenuClicked && (
-        <div title="Menu bar" className="sideNav">
-          <ul>
-            <NavLink to="/">
-              <li onClick={handleMenu}>HOME</li>
-            </NavLink>
-            <NavLink to="/about">
-              <li onClick={handleMenu}>ABOUT</li>
-            </NavLink>
-            <NavLink to="contact">
-              <li onClick={handleMenu}>CONTACT</li>
-            </NavLink>
-
-          </ul>
-        </div>
-      )}
+  
     </>
   );
 }
