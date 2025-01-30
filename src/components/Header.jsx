@@ -4,6 +4,7 @@ import { useData } from "../";
 import Rate from "./rate";
 import { FaRegMoneyBillAlt } from 'react-icons/fa';
 import { ReactTyped } from 'react-typed';
+import GoldRateDropdown from "./GoldRateDropdown/GoldRateDropdown";
 
 export default function Header() {
   const [isMenuClicked, setIsMenuClicked] = useState(false);
@@ -63,8 +64,11 @@ export default function Header() {
           <NavLink to="contact">
             <li className="NavItem">Contact</li>
           </NavLink>
+         
+            <GoldRateDropdown/>
+         
           {/* <Rate/> */}
-          <li
+          {/* <li
             className="NavItem"
             onMouseEnter={() => setIsHovered(true)} // On hover start
             onMouseLeave={() => setIsHovered(false)} // On hover end
@@ -80,10 +84,10 @@ export default function Header() {
           >
             <i className="fa fa-calendar" style={{ marginRight: "8px" }}></i>
             Today's Rate
-          </li>
+          </li> */}
 
 
-          {isHovered && (
+          {/* {isHovered && (
             <div
               className="rate-component-container"
               style={{
@@ -102,11 +106,11 @@ export default function Header() {
             >
               <Rate />
             </div>
-          )}
+          )} */}
 
         </div>
       </div>
-      {isMenuClicked && (
+      {/* {isMenuClicked && (
         <div title="Menu bar" className="sideNav">
           <ul>
             <NavLink to="/">
@@ -121,7 +125,7 @@ export default function Header() {
 
           </ul>
         </div>
-      )}
+      )} */}
     </>
   );
 }
