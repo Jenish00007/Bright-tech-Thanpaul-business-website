@@ -1,0 +1,220 @@
+/* Dashboard Layout */
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: black;
+  color: gold;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  border-bottom: 2px solid gold;
+  padding-bottom: 10px;
+}
+
+/* Sidebar Menu */
+.sidebar nav {
+  width: 100%;
+}
+
+.sidebar nav a {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  margin: 5px 0;
+  color: gold;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-left: 4px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.sidebar nav a:hover {
+  background-color: rgba(255, 215, 0, 0.1);
+  border-left: 4px solid gold;
+  padding-left: 24px;
+}
+
+.sidebar nav a.active {
+  background-color: rgba(255, 215, 0, 0.2);
+  border-left: 4px solid gold;
+  padding-left: 24px;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 30px;
+  background-color: #222;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Dashboard Cards */
+.dashboard-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.card {
+  background: linear-gradient(45deg, gold, darkgoldenrod);
+  color: black;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 22%;
+  box-shadow: 0px 4px 6px rgba(255, 215, 0, 0.3);
+  font-size: 18px;
+  font-weight: bold;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #444;
+}
+
+th {
+  background-color: #444;
+  color: white;
+}
+
+td {
+  background-color: #222;
+  color: white;
+}
+
+/* ============ 📌 RESPONSIVE DESIGN 📌 ============ */
+
+/* 🖥️ Large screens (desktops) */
+@media (max-width: 1200px) {
+  .card {
+    width: 30%; /* Adjust card width */
+  }
+}
+
+/* 📱 Tablets */
+@media (max-width: 992px) {
+  .dashboard-container {
+    flex-direction: column; /* Stack sidebar and content */
+  }
+
+  .sidebar {
+    width: 100%; /* Make sidebar full width */
+    padding: 10px;
+  }
+
+  .sidebar nav a {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .main-content {
+    padding: 20px;
+  }
+
+  .dashboard-cards {
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center;
+  }
+
+  .card {
+    width: 80%; /* Full width cards */
+    margin-bottom: 15px;
+  }
+}
+
+/* 📱 Small Screens (Mobile) */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none; /* Hide sidebar by default on mobile */
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80%;
+    height: 100vh;
+    background: black;
+    z-index: 1000;
+    flex-direction: column;
+  }
+
+  .sidebar.show {
+    display: flex; /* Show sidebar when active */
+  }
+
+  .sidebar h2 {
+    font-size: 18px;
+  }
+
+  .main-content {
+    padding: 15px;
+  }
+
+  .dashboard-cards {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 70%;
+    margin-bottom: 10px;
+  }
+
+  table {
+    font-size: 12px; /* Smaller font for mobile */
+  }
+
+  th, td {
+    padding: 8px;
+  }
+}
+
+/* 📱 Extra Small Screens (Portrait Phones) */
+@media (max-width: 480px) {
+  .sidebar {
+    width: 100%; /* Full width sidebar */
+  }
+
+  .dashboard-cards {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 80%;
+  }
+
+  table {
+    font-size: 10px;
+  }
+
+  th, td {
+    padding: 5px;
+  }
+}

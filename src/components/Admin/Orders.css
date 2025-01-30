@@ -1,0 +1,162 @@
+/* General Button Styles */
+button {
+    padding: 6px 12px; /* Smaller padding */
+    font-size: 12px; /* Smaller font size */
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-left: 10px; /* Space between buttons */
+  }
+  
+  /* Align buttons to the right */
+  .top-buttons {
+    display: flex;
+    justify-content: flex-end !important; 
+    margin-bottom: 10px;
+  }
+  
+  /* Primary Buttons */
+  .view-btn {
+    background-color: #FFD700;
+    color: black;
+  }
+  
+  .view-btn:hover {
+    background-color: #DAA520;
+  }
+  
+  /* Edit Button */
+  .edit-btn {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .edit-btn:hover {
+    background-color: #388E3C;
+  }
+  /* Search Bar Container */
+.search-bar-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    display: inline-block;
+  }
+  
+  /* Search Input Field */
+  .search-bar {
+    padding: 10px;
+    font-size: 14px;
+    min-width: 850px!important;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px; /* Space between input and button */
+  }
+  
+  
+  /* Search Bar Container */
+.search-bar-container {
+    display: flex;              /* Makes the container a flex container */
+    align-items: center;        /* Vertically aligns the input and button */
+    margin-bottom: 20px;        /* Adds spacing below the search bar */
+  }
+  
+  /* Search Input Field */
+  /* Search Bar Container */
+.search-bar-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Search Input Field */
+  .search-bar {
+    padding: 10px;
+    font-size: 14px;
+    width: 250px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  /* If you want to add focus effects */
+  .search-bar:focus {
+    border-color: #4CAF50;  /* Green border color on focus */
+    outline: none;
+  }
+  
+  
+  
+  /* Search Button */
+  .search-btn {
+    padding: 10px 15px;         /* Adds padding to the button */
+    background-color: #4CAF50;  /* Green background color */
+    color: white;               /* White text color */
+    border: none;               /* No border */
+    border-radius: 5px;         /* Rounded corners for the button */
+    cursor: pointer;           /* Changes cursor to pointer on hover */
+    font-size: 14px;            /* Sets font size of the button */
+  }
+  
+  .search-btn:hover {
+    background-color: #45a049;  /* Darker green on hover */
+  }
+  
+  .search-btn:active {
+    background-color: #3e8e41;  /* Even darker green when clicked */
+  }
+  
+  .search-btn:disabled {
+    background-color: #ccc;     /* Light gray color when disabled */
+    cursor: not-allowed;        /* Changes cursor to indicate disabled state */
+  }
+  
+  
+  /* Delete Button */
+
+  
+  .delete-multi-btn {
+    max-width: 150px;
+    margin-top: -45px !important;
+
+    background-color: black !important;
+    color: gold !important;
+  }
+  .delete-multi-btn:hover{
+    background-color: gold !important;
+    color: black !important;
+  }
+  .delete-btn{
+    
+    background-color: #D32F2F;
+    color: white;
+  }
+  .delete-btn:hover {
+    background-color: #B71C1C;
+  }
+  .view-icon{
+    padding: 12px;
+  }
+  .view-icon:hover{
+    background-color: #000;
+    color: #FFD700;
+  }
+  /* Pagination Buttons */
+  .pagination button {
+    align-items: end;
+    background-color: black !important;
+    color: gold !important;
+    margin: 5px;
+    font-size: 12px;
+    padding: 6px 10px; /* Smaller padding */
+    max-width: 200px;
+    align-items: center;
+  }
+  
+  .pagination button:hover {
+    background-color: gold !important;
+    color: black !important;
+  }
+  
+
+  
