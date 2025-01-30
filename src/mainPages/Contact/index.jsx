@@ -23,7 +23,7 @@ export default function Contact() {
               <span>
                 <LocationOnIcon />
               </span>
-              10-L, Duraisamy Naidu St, Dharmapuri Bazaar, Dharmapuri - 636701
+              No.10-A, Duraisamy Naidu St, Dharmapuri
             </p>
             <p>
               {" "}
@@ -36,8 +36,9 @@ export default function Contact() {
               <span>
                 <LocalPhoneRoundedIcon />
               </span>
-              +91 9442252929
+              +91 9442252929 , 04342-260525
             </p>
+            
           </p>
         </div>
        

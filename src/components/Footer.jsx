@@ -81,11 +81,11 @@ const Footer = () => {
         <div style={columnStyle}>
           <h3 style={{ color: " rgb(247, 239, 122)", fontWeight: "bold",fontfamily:"abel" }}>Dhanapal Jewellers</h3>
           <p style={textStyle}>
-          NK Dhanapal Jewellers is a jewelry store located at 10-L, Duraisamy Naidu Street, Dharmapuri, Tamil Nadu 636701, India.
+          No.10-A, Duraisamy Naidu St, Dharmapuri, Tamil Nadu 636701, India.
           </p>
           <p style={textStyle}>
-            📍 TamilNadu<br />
-            📞 +91 123456789
+            📍 TamilNadu <br/>
+            📞 +91 9442252929 , 04342-260525
           </p>
         </div>
 

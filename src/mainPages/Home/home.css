@@ -74,6 +74,7 @@ h4 {
   justify-content: space-around;
   align-items: center;
   width: 90%;
+  
 }
 
 .categoryBox div {
@@ -229,6 +230,7 @@ h4 {
     align-items: center;
     justify-content: center;
     padding: 20px;
+    margin-bottom: 140px;
   }
 
   .textContent h3 {
