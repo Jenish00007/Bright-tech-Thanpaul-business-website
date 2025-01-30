@@ -3,6 +3,8 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { useData } from "../";
 import Rate from "./rate";
 import { FaRegMoneyBillAlt } from 'react-icons/fa';
+import { ReactTyped } from 'react-typed';
+
 export default function Header() {
   const [isMenuClicked, setIsMenuClicked] = useState(false);
 
@@ -44,7 +46,8 @@ export default function Header() {
           </div>
           <div className="logoContatiner" onClick={() => { navigate('/') }}>
             <img src="./assets/logo.png" alt="" style={{ width: '50px', height: 'auto', display: 'flex' }} />
-            <h2>Dhanapal Jewellers</h2>
+            {/* <h2>Dhanapal Jewellers</h2> */}
+            <h2 className="text-white scale-up">{" "} <ReactTyped strings={["Dhanapal Jewellers"]} typeSpeed={100} loop /></h2>
             {/* <p> Jewelry House</p> */}
 
           </div>

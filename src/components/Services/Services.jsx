@@ -1,8 +1,38 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Heart, Shield, Truck, Clock } from 'lucide-react';
 import './Services.css';
 
 const ServicesPage = () => {
+  const cardRefs = useRef([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('flip-in');
+          } else {
+            entry.target.classList.remove('flip-in');
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '0px'
+      }
+    );
+
+    cardRefs.current.forEach((card) => {
+      if (card) observer.observe(card);
+    });
+
+    return () => {
+      cardRefs.current.forEach((card) => {
+        if (card) observer.unobserve(card);
+      });
+    };
+  }, []);
+
   const services = [
     {
       icon: <Heart className="service-icon" />,
@@ -31,10 +61,13 @@ const ServicesPage = () => {
       <h1 className="services-title">Our Services</h1>
       <div className="services-grid">
         {services.map((service, index) => (
-          <div key={index} className="service-card">
+          <div
+            key={index}
+            className="service-card"
+            ref={el => cardRefs.current[index] = el}
+          >
             {service.icon}
             <h3>{service.title}</h3>
-            {/* <p>{service.description}</p> */}
           </div>
         ))}
       </div>

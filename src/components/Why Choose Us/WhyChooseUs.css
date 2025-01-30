@@ -1,0 +1,192 @@
+/* Base styles */
+.whyUs {
+  padding: 4rem 1.5rem;
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.whyUs p {
+  font-family: abel, sans-serif;
+  text-align: center;
+  color: #ffffff;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.whyUs > h3 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.whyusContent {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Base mobile styles */
+
+@media (max-width: 767px) {
+  .whyusContent {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .middleImage {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    border-radius: 8px;
+  }
+
+  .whyUsDescription {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .whyUsDescription div {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .whyUsDescription div img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 1rem;
+  }
+
+  .whyUsDescription div h3 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+  }
+
+  .whyUsDescription div p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+/* Tablet styles */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .whyusContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .middleImage {
+    width: 40%;
+    max-width: 400px;
+    border-radius: 8px;
+  }
+
+  .whyUsDescription {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    padding: 0 2rem;
+  }
+
+  .whyUsDescription div {
+    padding: 1.5rem;
+    text-align: left;
+  }
+
+  .whyUsDescription div img {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 1rem;
+  }
+
+  .whyUsDescription div h3 {
+    font-size: 1.6rem;
+    margin: 0.75rem 0;
+  }
+
+  .whyUsDescription div p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+  .whyUs {
+    padding: 5rem 3rem;
+  }
+
+  .whyusContent {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .middleImage {
+    width: 30%;
+    max-width: 450px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  .whyUsDescription {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem 2rem;
+    width: 70%;
+  }
+
+  .whyUsDescription div {
+    padding: 1.5rem;
+    text-align: left;
+  }
+
+  .whyUsDescription div img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1.25rem;
+  }
+
+  .whyUsDescription div h3 {
+    font-size: 1.75rem;
+    margin: 0.75rem 0;
+    color: #ffffff;
+  }
+
+  .whyUsDescription div p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.9);
+  }
+}
+
+/* Large desktop styles */
+@media (min-width: 1440px) {
+  .whyUs {
+    padding: 6rem 4rem;
+  }
+
+  .whyusContent {
+    gap: 5rem;
+  }
+
+  .whyUsDescription {
+    gap: 4rem 3rem;
+  }
+
+  .whyUsDescription div h3 {
+    font-size: 2rem;
+  }
+
+  .whyUsDescription div p {
+    font-size: 1.1rem;
+  }
+}
+
+
+
+
