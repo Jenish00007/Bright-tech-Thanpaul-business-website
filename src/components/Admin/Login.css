@@ -1,0 +1,106 @@
+
+  .login-page {
+    display: flex;
+    
+    justify-content: center; 
+    align-items: center;
+    height: 100vh; 
+    background-color: #000; 
+  }
+  
+  .login-container {
+    background-color: #111;
+    margin: 50px 530px !important;
+    padding: 40px;
+    border-radius: 10px;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 450px; 
+    justify-content: center; 
+    border: 2px solid #FFD700; 
+    box-sizing: border-box; 
+  }
+  
+  /* Header Styling */
+  h2 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #FFD700; /* Golden text for the header */
+    font-weight: bold;
+  }
+  
+  /* Styling for form elements */
+  .login-container form {
+    /* display: flex; */
+    flex-direction: column;
+    gap: 15px; /* Space between form elements */
+  }
+  
+  /* Input fields with golden border and black background */
+  .login-container input {
+    margin: 0;
+    padding: 14px;
+    border: 2px solid #444;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    background-color: #333; 
+    color: #fff; 
+    width: 100%;
+    box-sizing: border-box; 
+    transition: all 0.3s ease;
+  }
+  
+  /* Focus effect for inputs */
+  .login-container input:focus {
+    border-color: #FFD700; 
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5); 
+  }
+  
+  /* Error message styling */
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+    font-weight: bold;
+    display: none;
+  }
+  
+  .error-message.active {
+    display: block;
+  }
+  
+  /* Login button styling with golden color */
+  button {
+    padding: 14px;
+    border: none;
+    background-color: #FFD700; /* Golden background for the button */
+    color: #000; /* Black text on button */
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+    width: 100%; /* Make the button fill the container */
+  }
+  
+  /* Button hover effect */
+  button:hover {
+    background-color: #ffcc00; /* Lighter golden color on hover */
+    transform: scale(1.05); /* Slight scale effect for hover */
+  }
+  
+  /* Forgot password link */
+  .forgot-password {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #FFD700; /* Golden text for the link */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .forgot-password:hover {
+    color: #ffcc00; /* Lighter golden color on hover */
+  }
+  

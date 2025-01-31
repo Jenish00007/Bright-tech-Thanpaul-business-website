@@ -11,7 +11,13 @@ import TermsAndConditions from "../src/components/Terms And Conditions/Terms_And
 import CancellationPolicy from "../src/components/CancellationPolicy/CancellationPolicy";
 import PrivacyPolicy from "../src/components/PrivacyPolicy/PrivacyPolicy";
 import RefundPolicy from "../src/components/RefundPolicy/RefundPolicy";
-
+//Admin Panel
+import Dashboard from "./components/Admin/Dashboard";
+import Users from './components/Admin/Users';
+import Products from './components/Admin/Products';
+import Orders from './components/Admin/Orders';
+import Notifications from './components/Admin/Notifications';
+import Login from "./components/Admin/Login";
 
 function App() {
 
@@ -31,7 +37,20 @@ function App() {
           <Route path="/PrivacyPolicy" element={<PrivacyPolicy/>}/>
           <Route path="/RefundPolicy" element={<RefundPolicy/>}/>
           <Route path="/contact" element={<Contact />}/>
-          </Routes>
+
+          {/* Admin Panel */}
+          <Route path="/login" element={<Login />}  />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/users" element={<Users />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/orders" element={<Orders />} />
+        <Route path="/notifications" element={<Notifications />} />
+          {/* <Route path="/products" element={isAuthenticated ? <Products /> : <Navigate to="/login" />} />
+          <Route path="/orders" element={isAuthenticated ? <Orders /> : <Navigate to="/login" />} />
+          <Route path="/customers" element={isAuthenticated ? <Customers /> : <Navigate to="/login" />} />
+          <Route path="/users" element={isAuthenticated ? <Users /> : <Navigate to="/login" />} />
+          <Route path="*" element={<Navigate to="/dashboard" />} /> */}
+        </Routes>
         
       </div> 
       
