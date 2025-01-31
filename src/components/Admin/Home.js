@@ -30,7 +30,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
+    <div className="dashboard-header">
       <h2>Welcome to the Admin Dashboard</h2>
       <p>Manage your store efficiently with real-time insights.</p>
 
