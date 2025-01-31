@@ -416,6 +416,8 @@ footer h6 {
 .MuiBadge-badge{
   background-color: var(--primary-text-color);
 }
+
+
 /**
 CSS Loader
 */
@@ -1024,4 +1026,8 @@ text-decoration:  overline var(--primary-theme-color);
     max-width: 500px;
     font-family: abel;
   }
+}
+
+.GoldRateCointainer{
+  display: flex;
 }

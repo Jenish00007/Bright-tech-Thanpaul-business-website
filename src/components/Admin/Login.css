@@ -23,7 +23,7 @@
   }
   
   /* Header Styling */
-  h2 {
+ .dashboard-header h2  {
     margin-bottom: 30px;
     font-size: 28px;
     color: #FFD700; /* Golden text for the header */
@@ -72,7 +72,7 @@
   }
   
   /* Login button styling with golden color */
-  button {
+ .login-button {
     padding: 14px;
     border: none;
     background-color: #FFD700; /* Golden background for the button */

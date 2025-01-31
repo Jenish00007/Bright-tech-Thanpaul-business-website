@@ -5,6 +5,7 @@ import Rate from "./rate";
 import { FaRegMoneyBillAlt } from 'react-icons/fa';
 import { ReactTyped } from 'react-typed';
 import GoldRateDropdown from "./GoldRateDropdown/GoldRateDropdown";
+import SilverRateDropdownComponent from "./SilverRateDropdown/SilverRateDropdown";
 
 export default function Header() {
   const [isMenuClicked, setIsMenuClicked] = useState(false);
@@ -55,6 +56,7 @@ export default function Header() {
         </div>
         <div className="GoldRateCointainer">
         <GoldRateDropdown/>
+        <SilverRateDropdownComponent/>
         </div>
         <div className="navbarIcons">
 
@@ -73,4 +75,3 @@ export default function Header() {
     </>
   );
 }
-
