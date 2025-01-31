@@ -142,15 +142,24 @@ button {
     color: #FFD700;
   }
   /* Pagination Buttons */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
   .pagination button {
     align-items: end;
     background-color: black !important;
     color: gold !important;
-    margin: 5px;
+    margin: 3px;
     font-size: 12px;
-    padding: 6px 10px; /* Smaller padding */
+    padding: 8px 10px; /* Smaller padding */
     max-width: 200px;
     align-items: center;
+  }
+  .pagination h6{
+    color: gold;
+    margin: 10px;
   }
   
   .pagination button:hover {

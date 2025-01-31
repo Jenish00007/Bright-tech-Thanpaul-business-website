@@ -241,7 +241,7 @@ const Orders = () => {
       {/* Pagination */}
       <div className="pagination">
         <button onClick={prevPage} disabled={currentPage === 1}>⬅ Prev</button>
-        <span>Page {currentPage} of {Math.ceil(filteredOrders.length / ordersPerPage)}</span>
+        <h6>Page {currentPage} of {Math.ceil(filteredOrders.length / ordersPerPage)}</h6>
         <button onClick={nextPage} disabled={currentPage >= Math.ceil(filteredOrders.length / ordersPerPage)}>Next ➡</button>
       </div>
 
