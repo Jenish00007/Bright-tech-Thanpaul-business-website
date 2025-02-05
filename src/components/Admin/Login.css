@@ -10,6 +10,7 @@
   
   .login-container {
     background-color: #111;
+    font-size: 16px;
     margin: 50px 530px !important;
     padding: 40px;
     border-radius: 10px;
@@ -17,18 +18,24 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
     width: 100%;
     max-width: 450px; 
-    justify-content: center; 
     border: 2px solid #FFD700; 
     box-sizing: border-box; 
+    font-weight: bold;
   }
+
+  .login-container h2 {
+
   
   /* Header Styling */
  .dashboard-header h2  {
+
     margin-bottom: 30px;
-    font-size: 28px;
-    color: #FFD700; /* Golden text for the header */
+    font-size: 20px;
+    color: #FFD700; 
     font-weight: bold;
   }
+  /* Header Styling */
+
   
   /* Styling for form elements */
   .login-container form {

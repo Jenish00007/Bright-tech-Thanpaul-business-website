@@ -1,0 +1,134 @@
+/* Modal overlay */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow: hidden; /* Prevents background scrolling */
+}
+
+/* Modal content box */
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
+  max-height: 80vh; /* Limits modal height */
+  overflow-y: auto; /* Enables scrolling if content overflows */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Hide scrollbar (optional) */
+.modal-content::-webkit-scrollbar {
+  width: 5px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Modal title */
+.modal-content h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Labels */
+.modal-content label {
+  display: block;
+  font-weight: bold;
+  margin: 10px 0 5px;
+  text-align: left;
+}
+
+/* Input fields */
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Image preview */
+.modal-content img {
+  margin-top: 10px;
+  border-radius: 5px;
+  max-width: 100px;
+  height: auto;
+}
+
+/* Modal buttons */
+.modal-actions {
+  margin-top: 15px;
+}
+
+.modal-actions button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 5px;
+  transition: background 0.3s;
+}
+
+.modal-actions button:first-child {
+  background: #ccc;
+}
+
+.modal-actions button:last-child {
+  background: #007bff;
+  color: white;
+}
+
+.modal-actions button:hover {
+  opacity: 0.8;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 480px) {
+  .modal-content {
+    width: 90%;
+    padding: 15px;
+    max-height: 70vh; /* Adjusted for mobile screens */
+  }
+
+  .modal-content h2 {
+    font-size: 18px;
+  }
+
+  .modal-actions button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
