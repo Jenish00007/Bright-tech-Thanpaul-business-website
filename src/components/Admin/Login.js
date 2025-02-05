@@ -69,7 +69,7 @@ const Login = () => {
           {error}
         </div>
 
-        <button type="submit">Login</button>
+        <button className ="login-button" type="submit">Login</button>
         <a href="/forgot-password" className="forgot-password">Forgot password?</a>
       </form>
     </div>

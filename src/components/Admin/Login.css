@@ -22,7 +22,13 @@
     box-sizing: border-box; 
     font-weight: bold;
   }
+
   .login-container h2 {
+
+  
+  /* Header Styling */
+ .dashboard-header h2  {
+
     margin-bottom: 30px;
     font-size: 20px;
     color: #FFD700; 
@@ -73,7 +79,7 @@
   }
   
   /* Login button styling with golden color */
-  button {
+ .login-button {
     padding: 14px;
     border: none;
     background-color: #FFD700; /* Golden background for the button */

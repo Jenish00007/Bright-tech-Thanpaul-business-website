@@ -8,10 +8,10 @@ const GoldRateDropdown = () => {
   const rates = [
     { type: '24K GOLD', weight: '1G', price: '₹0.00' },
     { type: '22K GOLD', weight: '1G', price: '₹0.00' },
-    { type: '18K GOLD', weight: '1G', price: '₹0.00' },
-    { type: '14K GOLD', weight: '1G', price: '₹0.00' },
+    // { type: '18K GOLD', weight: '1G', price: '₹0.00' },
+    // { type: '14K GOLD', weight: '1G', price: '₹0.00' },
     { type: 'PLATINUM', weight: '1G', price: '₹0.00' },
-    { type: 'SILVER', weight: '1G', price: '₹101.00' },
+    // { type: 'SILVER', weight: '1G', price: '₹101.00' },
   ];
 
   useEffect(() => {
@@ -35,7 +35,7 @@ const GoldRateDropdown = () => {
       <div className="rate-label">Today's Rate:</div>
       <div className="dropdown">
         <button className="dropdown-toggle" onClick={toggleDropdown}>
-          <span>24K GOLD 1G: ₹0.00</span>
+          <span>22K GOLD 1G: ₹0.00</span>
           {/* <span className={`dropdown-arrow ${isOpen ? 'open' : ''}`}>▼</span> */}
         </button>
         <div className={`dropdown-menu ${isOpen ? 'open' : ''}`}>
