@@ -1,10 +1,40 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './GoldRateDropdown.css';
-
+import axios from 'axios';
 const GoldRateDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
 
+  const [goldRate, setGoldRate] = useState(null);
+  const [silverRate, setSilverRate] = useState(null);
+  const [rateUpdated, setRateUpdated] = useState(null);
+
+  // Fetch rates with Axios
+  const fetchRates = async () => {
+      
+      try {
+          const response = await axios.get('https://jerwishtech.site/v1/api/account/todayrate');
+          console.log('response:',response.data.Rate);
+          if (response.data) {
+              setGoldRate(response.data.Rate);
+              setSilverRate(response.data.SILVERRATE);
+              setRateUpdated(formatDate(new Date()));
+             
+          }
+          
+      } catch (error) {
+          console.error('Error fetching rates:', error);
+      }
+  };
+  fetchRates()
+  const formatDate = (date) => {
+      const formattedDate = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}`;
+      return formattedDate;
+  };
+
+  useEffect(() => {
+      fetchRates();
+  }, []);
   const rates = [
     { type: '24K GOLD', weight: '1G', price: '₹0.00' },
     { type: '22K GOLD', weight: '1G', price: '₹0.00' },

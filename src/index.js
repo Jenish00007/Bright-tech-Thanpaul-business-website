@@ -1,19 +1,18 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import { BrowserRouter as Router } from "react-router-dom";
 import "react-inner-image-zoom/lib/InnerImageZoom/styles.css";
 
+// Create a root element for rendering the app
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
-
-ReactDOM.render(
+// Render the app inside the root element
+root.render(
   <React.StrictMode>
     <Router>
-    
-                <App />
-              
+      <App />
     </Router>
-  </React.StrictMode>,
-  document.getElementById("root")
+  </React.StrictMode>
 );

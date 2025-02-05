@@ -6,7 +6,6 @@ import About from "./mainPages/About/index";
 import Home from "./mainPages/Home/index";
 import Footer from "./components/Footer";
 import Contact from "./mainPages/Contact/index";
-// import { useAuth } from "./context/AuthContext";
 import TermsAndConditions from "../src/components/Terms And Conditions/Terms_And_Conditions";
 import CancellationPolicy from "../src/components/CancellationPolicy/CancellationPolicy";
 import PrivacyPolicy from "../src/components/PrivacyPolicy/PrivacyPolicy";
@@ -20,7 +19,7 @@ import Notifications from './components/Admin/Notifications';
 import Login from "./components/Admin/Login";
 
 function App() {
-  // const { isAuthenticated } = useAuth();
+ 
   var auth = localStorage.getItem("auth");
   var isAuthenticatedValue = false;
   if(auth === "true"){

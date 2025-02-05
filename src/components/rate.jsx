@@ -8,9 +8,10 @@ export default function Rate() {
 
     // Fetch rates with Axios
     const fetchRates = async () => {
+        console.log('response:');
         try {
             const response = await axios.get('https://jerwishtech.site/v1/api/account/todayrate');
-            console.log(response.data);
+            console.log('response:',response);
             if (response.data) {
                 setGoldRate(response.data.Rate);
                 setSilverRate(response.data.SILVERRATE);
@@ -21,12 +22,12 @@ export default function Rate() {
             console.error('Error fetching rates:', error);
         }
     };
-
+    fetchRates()
     const formatDate = (date) => {
         const formattedDate = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}`;
         return formattedDate;
     };
-
+  
     useEffect(() => {
         fetchRates();
     }, []);
