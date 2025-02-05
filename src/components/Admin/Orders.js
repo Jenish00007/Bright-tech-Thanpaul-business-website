@@ -215,7 +215,10 @@ const Orders = () => {
                   <FontAwesomeIcon
                     icon={faEye}
                     className="view-icon"
-                    onClick={() => (setSelectedOrder(order), setModalType('view'))}
+                    onClick={() => {
+                      setSelectedOrder(order);
+                      setModalType('view');
+                    }}
                   />
                   <FontAwesomeIcon
                     icon={faPen}
@@ -240,9 +243,9 @@ const Orders = () => {
 
       {/* Pagination */}
       <div className="pagination">
-        <button onClick={prevPage} disabled={currentPage === 1}>⬅ Prev</button>
+        <button onClick={prevPage} disabled={currentPage === 1}>Prev</button>
         <h6>Page {currentPage} of {Math.ceil(filteredOrders.length / ordersPerPage)}</h6>
-        <button onClick={nextPage} disabled={currentPage >= Math.ceil(filteredOrders.length / ordersPerPage)}>Next ➡</button>
+        <button onClick={nextPage} disabled={currentPage >= Math.ceil(filteredOrders.length / ordersPerPage)}>Next</button>
       </div>
 
       {/* Modal for View */}

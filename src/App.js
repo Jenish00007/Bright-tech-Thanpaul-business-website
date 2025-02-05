@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route,Navigate  } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
 import Header from "./components/Header";
@@ -6,7 +6,7 @@ import About from "./mainPages/About/index";
 import Home from "./mainPages/Home/index";
 import Footer from "./components/Footer";
 import Contact from "./mainPages/Contact/index";
-import { useAuth } from "./context/AuthContext";
+// import { useAuth } from "./context/AuthContext";
 import TermsAndConditions from "../src/components/Terms And Conditions/Terms_And_Conditions";
 import CancellationPolicy from "../src/components/CancellationPolicy/CancellationPolicy";
 import PrivacyPolicy from "../src/components/PrivacyPolicy/PrivacyPolicy";
@@ -20,7 +20,14 @@ import Notifications from './components/Admin/Notifications';
 import Login from "./components/Admin/Login";
 
 function App() {
-
+  // const { isAuthenticated } = useAuth();
+  var auth = localStorage.getItem("auth");
+  var isAuthenticatedValue = false;
+  if(auth === "true"){
+    isAuthenticatedValue = true;
+  }
+  
+  
 
   return (
     <div className="App">
@@ -40,16 +47,11 @@ function App() {
 
           {/* Admin Panel */}
           <Route path="/login" element={<Login />}  />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/users" element={<Users />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/orders" element={<Orders />} />
+          <Route path="/dashboard" element={isAuthenticatedValue ? <Dashboard /> : <Navigate to="/login" />} />
+          <Route path="/users"  element={isAuthenticatedValue ? <Users /> : <Navigate to="/login" />} />
+        <Route path="/products" element={isAuthenticatedValue ? <Products /> : <Navigate to="/login" />} />
+        <Route path="/orders"  element={isAuthenticatedValue ? <Orders /> : <Navigate to="/login" />} />
         <Route path="/notifications" element={<Notifications />} />
-          {/* <Route path="/products" element={isAuthenticated ? <Products /> : <Navigate to="/login" />} />
-          <Route path="/orders" element={isAuthenticated ? <Orders /> : <Navigate to="/login" />} />
-          <Route path="/customers" element={isAuthenticated ? <Customers /> : <Navigate to="/login" />} />
-          <Route path="/users" element={isAuthenticated ? <Users /> : <Navigate to="/login" />} />
-          <Route path="*" element={<Navigate to="/dashboard" />} /> */}
         </Routes>
         
       </div> 

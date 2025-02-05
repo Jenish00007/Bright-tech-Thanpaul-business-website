@@ -1,0 +1,108 @@
+
+
+.product-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.product-image-large {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+}
+
+.modal-content {
+  background: black;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 1000;
+  text-align: center;
+}
+.products-container{
+  display: fixed;
+  flex-wrap: wrap;
+  font-size: 14px !important;
+  gap: 20px;
+}
+.products-container h2{
+  color: #ffffff;
+  font-size: 18px !important;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.actionsbuttons{
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+/* Container for Action Buttons */
+.actions {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.delete-selected-btn,
+.download-btn {
+  background-color: gold;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.delete-selected-btn:hover,
+.download-btn:hover {
+  background-color: #c8a100;
+}
+
+/* Table Layout */
+.table-container {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.table th, .table td {
+  padding: 12px 15px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.table th {
+  background-color: #333;
+  color: white;
+}
+
+.table tr:nth-child(even) {
+  background-color: #444;
+}
+
+.table tr:hover {
+  background-color: #555;
+}
+
+/* Checkbox Styles */
+input[type="checkbox"] {
+  margin: 0;
+  cursor: pointer;
+}
+
+/* Modal Adjustments */
+@media screen and (max-width: 768px) {
+  .delete-selected-btn,
+  .download-btn {
+      width: 100%;
+      padding: 12px;
+  }
+}
