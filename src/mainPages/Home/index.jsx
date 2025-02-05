@@ -3,29 +3,43 @@ import { NavLink, useNavigate } from "react-router-dom";
 import "./home.css";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import ProductCard from "../../components/ProductCard";
-import { CarouselWithControlsExample as ImageSlider } from '../../components/imageslider';
-import AboutFounder from '../About/about1.jsx';
 import Slider from "../../mainPages/Home/slider/Slider.jsx";
-import Why from "../../components/why.jsx";
-import { useData } from '../../';
 import ServicesPage from '../../components/Services/Services.jsx';
 import Blog from "../../components/Blog/Blog.jsx";
 import ZoomImage from '../About/about1.jsx';
 import Projects from '../../components/Projects/Projects.js';
-import Carousel from '../../components/Projects copy/Carousel.jsx';
-import WhyChooseUs from '../../components/Why Choose Us/WhyChooseUs.jsx';
+
 
 export default function Home() {
-  const { backendData, categoriesData, setFiltersUsed } = useData();
+ 
   const navigate = useNavigate();
   
   useEffect(() => {
     AOS.init({ duration: 1000 }); // Initialize AOS with a 1-second animation duration
   }, []);
 
-  const trendingArray = backendData?.productsData.filter((item) => item.product_isBadge === "Trending");
-
+ const categories = [
+   {
+     _id: '1',
+     categoryName: "necklace",
+     thumbnail: "/assets/categoryIcon/necklace.png",
+   },
+   {
+     _id: '2',
+     categoryName: "bracelet",
+     thumbnail: "/assets/categoryIcon/bracelet.png",
+   },
+   {
+     _id: '3',
+     categoryName: "ring",
+     thumbnail: "/assets/categoryIcon/ring.png",
+   },
+   {
+     _id: '4',
+     categoryName: "earring",
+     thumbnail: "/assets/categoryIcon/earring.png"
+   }
+ ];
   return (
     <>
       <Slider />
@@ -45,18 +59,11 @@ export default function Home() {
         <h3>SHOP BY CATEGORY</h3>
         <p>Browse through your favorite categories. we have got them all!</p>
         <div className="categoryBox">
-          {categoriesData.map(({ _id, categoryName, thumbnail }) => (
+          {categories.map(({ _id, categoryName, thumbnail }) => (
             <div
               key={_id}
               className={categoryName}
-              onClick={() => {
-                setFiltersUsed({
-                  type: "CLEARFILTER",
-                  inputValue: "",
-                });
-                setFiltersUsed({ type: "CATEGORY", inputValue: categoryName });
-                navigate('/');
-              }}
+              
             >
               <img src={thumbnail} alt={` random image of ${categoryName}`} />
               <p>{categoryName}</p>

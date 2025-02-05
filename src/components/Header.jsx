@@ -1,8 +1,5 @@
 import { useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import { useData } from "../";
-import Rate from "./rate";
-import { FaRegMoneyBillAlt } from 'react-icons/fa';
 import { ReactTyped } from 'react-typed';
 import GoldRateDropdown from "./GoldRateDropdown/GoldRateDropdown";
 import SilverRateDropdownComponent from "./SilverRateDropdown/SilverRateDropdown";
