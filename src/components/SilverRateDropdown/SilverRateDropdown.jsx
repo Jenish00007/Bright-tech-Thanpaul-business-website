@@ -38,10 +38,10 @@ const SilverRateDropdownComponent = () => {
 
   return (
     <div className="dropdown-container">
-      <div className="rate-label">Today's Rate:</div>
+      <div className="rate-label"></div>
       <div className="dropdown">
         <button className="silver-dropdown-toggle"style={{ background: 'linear-gradient(135deg, #C0C0C0, #A9A9A9)', transition: '0.3s' }} >
-          <span>GOLD 1G:{prices.silver}</span>
+          <span>GOLD 1G: ₹ {prices.silver}</span>
           {/* <span className={`dropdown-arrow ${isOpen ? 'open' : ''}`}>▼</span> */}
         </button>
         

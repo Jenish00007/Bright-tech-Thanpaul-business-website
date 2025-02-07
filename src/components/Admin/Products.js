@@ -33,10 +33,10 @@ const Product = () => {
     setModalType("add");
   };
 
-  const handleEdit = (product) => {
-    setSelectedProduct(product);
-    setModalType("edit");
-  };
+  // const handleEdit = (product) => {
+  //   setSelectedProduct(product);
+  //   setModalType("edit");
+  // };
 
   const handleView = (product) => {
     setSelectedProduct(product);

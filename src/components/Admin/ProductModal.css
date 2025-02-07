@@ -65,8 +65,13 @@
   border-radius: 5px;
   font-size: 16px;
   margin-bottom: 10px;
+  height: 100px;
 }
-
+.modal-content textarea {
+  height: 450px;
+  padding: 15px;
+  resize: vertical;
+}
 /* Image preview */
 .modal-content img {
   margin-top: 10px;
