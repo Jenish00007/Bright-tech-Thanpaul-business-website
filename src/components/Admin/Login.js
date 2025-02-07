@@ -41,7 +41,7 @@ const Login = () => {
 
   return (
     <div className="login-container">
-      <h2>Login to Admin Panel</h2>
+      <p>Login to Admin Panel</p>
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="email">Email:</label>

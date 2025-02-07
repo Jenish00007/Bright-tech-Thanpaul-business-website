@@ -110,4 +110,6 @@
   .forgot-password:hover {
     color: #ffcc00; /* Lighter golden color on hover */
   }
-  
+  h3 {
+    font-size: 20;
+  }
