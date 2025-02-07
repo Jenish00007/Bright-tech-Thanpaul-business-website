@@ -8,8 +8,8 @@ import ServicesPage from '../../components/Services/Services.jsx';
 import Blog from "../../components/Blog/Blog.jsx";
 import ZoomImage from '../About/about1.jsx';
 import Projects from '../../components/Projects/Projects.js';
-
-
+// import ProductCard from '../../components/ProductCard/ProductCard.js';
+import Gallery from '../../components/gallery/gallery.jsx';
 export default function Home() {
  
   const navigate = useNavigate();
@@ -51,10 +51,13 @@ export default function Home() {
         {/* <div className="productsContainer">
           {trendingArray.slice(0, 6).map((item) => <ProductCard key={item.id} item={item} />)}
         </div> */}
+        
       </section>
 <br/>
     
-     
+     <section className='shop' data-aos="fade-up">
+     <Gallery/>
+      </section>
       <section className="ShopByCategory" data-aos="fade-up">
         <h3>SHOP BY CATEGORY</h3>
         <p>Browse through your favorite categories. we have got them all!</p>

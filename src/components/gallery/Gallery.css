@@ -1,0 +1,22 @@
+.gallery-row {
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+  }
+  
+  .gallery-img {
+    width: 100%;
+    height: auto;
+    max-height: 300px; /* Adjust max height as needed */
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+  }
+  .gallery-img:hover{
+    color: #494949 ;
+border-radius: 50px;
+border-color: #494949;
+transition: all 0.3s ease 0s;
+  }
+  

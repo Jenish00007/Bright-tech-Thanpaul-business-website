@@ -1,51 +1,55 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import './SilverRateDropdown.css';
-
+import axios from 'axios';
 const SilverRateDropdownComponent = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const dropdownRef = useRef(null);
-
-  const rates = [
-    { type: 'SILVER', weight: '1G', price: '₹608.53' },
-  ];
+  const [prices, setPrices] = useState({ gold: null, silver: null });
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
 
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setIsOpen(false);
+    // Replace with your API endpoint
+    const fetchPrices = async () => {
+      try {
+        const response = await axios.get('https://jerwishtech.site/v1/api/account/todayrate');
+        setPrices({
+          gold: response.data.Rate, // Adjust based on your API response structure
+          silver: response.data.SILVERRATE, // Adjust based on your API response structure
+        });
+        setLoading(false);
+      } catch (err) {
+        setError('Failed to fetch prices');
+        setLoading(false);
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
+    fetchPrices();
+  }, []); // Empty dependency array means this runs once when the component mounts
 
-  const toggleDropdown = (event) => {
-    event.stopPropagation();
-    setIsOpen(!isOpen);
-  };
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>{error}</div>;
+  }
+
+  // Fetch rates with Axios
+  
 
   return (
-    <div className="silver-dropdown-container" ref={dropdownRef}>
-      {/* <div className="silver-rate-label">Today's Rate:</div> */}
-      <div className="silver-dropdown">
-        <button className="silver-dropdown-toggle" onClick={toggleDropdown} style={{ background: 'linear-gradient(135deg, #C0C0C0, #A9A9A9)', transition: '0.3s' }}>
-          <span>Silver 1G: ₹608.53</span>
+    <div className="dropdown-container">
+      <div className="rate-label">Today's Rate:</div>
+      <div className="dropdown">
+        <button className="silver-dropdown-toggle"style={{ background: 'linear-gradient(135deg, #C0C0C0, #A9A9A9)', transition: '0.3s' }} >
+          <span>GOLD 1G:{prices.silver}</span>
+          {/* <span className={`dropdown-arrow ${isOpen ? 'open' : ''}`}>▼</span> */}
         </button>
-        <div className={`silver-dropdown-menu ${isOpen ? 'open' : ''}`}>
-          {rates.map((rate, index) => (
-            <div 
-              key={index} 
-              className="silver-dropdown-item"
-              style={{ animationDelay: `${index * 50}ms`, background: 'linear-gradient(135deg, #C0C0C0, #A9A9A9)' }}
-            >
-              {rate.type} {rate.weight}: {rate.price}
-            </div>
-          ))}
-        </div>
+        
+        
       </div>
     </div>
   );
 };
 
 export default SilverRateDropdownComponent;
+

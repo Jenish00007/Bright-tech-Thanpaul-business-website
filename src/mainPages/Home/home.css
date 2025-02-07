@@ -431,3 +431,9 @@ h4 {
 [data-aos].aos-animate {
   opacity: 1;
 }
+
+
+.shop {
+  overflow: auto;
+  height: 625px;
+}

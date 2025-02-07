@@ -8,7 +8,7 @@ import Products from './Products';
 
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState('products');
-
+  
   return (
     <div className="dashboard-container">
       {/* Sidebar Navigation */}
@@ -36,6 +36,11 @@ const Dashboard = () => {
             className={activeTab === 'products' ? 'active' : ''} 
             onClick={() => setActiveTab('products')}
           >Products</a>
+          {/* <a 
+            href="#" 
+            className={activeTab === 'products' ? 'active' : ''} 
+            onClick={{handleAddProduct}}
+          >Add New Product</a> */}
 
         </nav>
       </div>

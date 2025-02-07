@@ -24,6 +24,10 @@ const ProductModal = ({ product, type, onClose, onSave }) => {
   };
 
   const handleSave = () => {
+    if (!formData.name || !formData.category || !formData.price) {
+      alert("Please fill in all required fields.");
+      return;
+    }
     onSave(formData);
     onClose();
   };
@@ -51,9 +55,7 @@ const ProductModal = ({ product, type, onClose, onSave }) => {
         <label>Image URL:</label>
         <input type="text" name="image" value={formData.image} onChange={handleChange} disabled={type === "view"} />
 
-        {formData.image && (
-          <img src={formData.image} alt="Product" width="100" height="100" />
-        )}
+        {formData.image && <img src={formData.image} alt="Product" width="100" height="100" />}
 
         <div className="modal-actions">
           <button onClick={onClose}>Close</button>
