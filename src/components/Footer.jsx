@@ -94,7 +94,7 @@ const Footer = () => {
           <h4 style={titleStyle}>Important Links</h4>
           <ul style={linkListStyle}>
             <li>
-              <a href="#" style={linkStyle}>
+              <a href="/" style={linkStyle}>
                 Home
               </a>
             </li>
