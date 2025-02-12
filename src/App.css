@@ -46,7 +46,7 @@ section {
 .logoContatiner h2 {
   width: 320px;
   text-align: left;
-  font-size: 1em;
+  font-size: 0.8em;
   padding: 10px;
 }
 
@@ -1031,4 +1031,61 @@ text-decoration:  overline var(--primary-theme-color);
 
 .GoldRateCointainer{
   display: flex;
+}
+/* Default Styles */
+.navbarIcons {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.3s ease;
+}
+
+/* Hide navbar items by default on small screens */
+.navbarIcons.hide {
+  transform: translateX(100%); /* Hide off-screen */
+}
+
+/* Show navbar items when the menu is toggled */
+.navbarIcons.show {
+  transform: translateX(0); /* Bring items back into view */
+}
+
+/* Media Queries for Small Screens */
+@media (max-width: 768px) {
+  .navbarIcons {
+    position: absolute;
+    top: 80px; /* Adjust according to your header height */
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Optional: add a background for better visibility */
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .NavItem {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  /* Menu Icon */
+  .menuBar {
+    display: block;
+    cursor: pointer;
+  }
+
+  .sideBarMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+  }
+
+  .bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+  }
 }

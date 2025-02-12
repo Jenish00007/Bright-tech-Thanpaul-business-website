@@ -1,14 +1,17 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&display=swap');
-
+@font-face {
+  font-family: Trajan;
+  src: url(../public/TrajanPro-Regular.ttf);
+}
 
 html {
   font-size: calc(15px + 0.390625vw);
 }
 
 body {
-  font-family: 'Cinzel Decorative', cursive, sans-serif;
+  font-family: 'Trajan';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin:0;

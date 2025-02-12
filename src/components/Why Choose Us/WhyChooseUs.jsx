@@ -7,7 +7,7 @@ function WhyChooseUs() {
   return (
     <section className="whyUs" data-aos="fade-down">
     <p>BEST IN BUSINESS</p>
-    <h3>Why Choose Us</h3>
+    <h4>Why Choose Us</h4>
     <div className="whyusContent">
       <img className="middleImage" src="\assets\model3.jpg" alt="" />
       <div className="whyUsDescription">
