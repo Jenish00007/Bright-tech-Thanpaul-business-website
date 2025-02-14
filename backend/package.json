@@ -1,7 +1,7 @@
 {
   "name": "my-node-app",
   "version": "1.0.0",
-  "main": "app.js",
+  "main": "./src/app.js",
   "scripts": {
     "start": "node app.js",
     "build": "npx babel src --out-dir dist",

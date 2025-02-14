@@ -112,9 +112,9 @@ const fs = require('fs');
 
 // Create MySQL connection
 const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '', // Change as per your setup
+    host: process.env.HOST,
+    user: process.env.ROOT,
+    password:process.env.PASS, 
 });
 
 db.connect((err) => {
@@ -174,11 +174,11 @@ if (!fs.existsSync(uploadDir)) {
 }
 
 // Serve uploaded images statically
-app.use('/uploads', express.static(uploadDir));
+app.use('./src/uploads', express.static(uploadDir));
 
 // Multer storage configuration
 const storage = multer.diskStorage({
-    destination: './uploads',
+    destination: './src/uploads',
     filename: (req, file, cb) => {
         cb(null, Date.now() + path.extname(file.originalname));
     }
