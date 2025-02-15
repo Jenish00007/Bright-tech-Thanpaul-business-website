@@ -10,6 +10,8 @@ import ZoomImage from '../About/about1.jsx';
 import Projects from '../../components/Projects/Projects.js';
 // import ProductCard from '../../components/ProductCard/ProductCard.js';
 import Gallery from '../../components/gallery/gallery.jsx';
+import GoldRateDropdown from "../../components/GoldRateDropdown/GoldRateDropdown";
+import SilverRateDropdownComponent from "../../components/SilverRateDropdown/SilverRateDropdown";
 export default function Home() {
 
   const navigate = useNavigate();
@@ -42,6 +44,20 @@ export default function Home() {
   ];
   return (
     <>
+    <section className='mobile-only-section' data-aos="fade-up">
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <div className="single-line-content">
+              <span className="title">Todays rate:</span>
+              <GoldRateDropdown />
+              <span className="separator">||</span>
+              <SilverRateDropdownComponent />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
       <Slider />
       {/* <Carousel/> */}
       <section className="trending" data-aos="fade-up">

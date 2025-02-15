@@ -17,7 +17,7 @@ const GoldRateDropdown = () => {
         });
         setLoading(false);
       } catch (err) {
-        setError('Failed to fetch prices');
+        setError('Rs:8000');
         setLoading(false);
       }
     };

@@ -437,3 +437,41 @@ h4 {
   overflow: auto;
   height: 625px;
 }
+
+
+
+/* Hide the section by default */
+.mobile-only-section {
+  display: none;
+}
+
+/* Show the section only on mobile screens */
+@media only screen and (max-width: 767px) {
+  .mobile-only-section {
+    display: block;
+    background-color:transparent; /* Example background color */
+    padding: 10px; /* Example padding */
+    border-radius: 8px; /* Example border radius */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Example shadow */
+    margin: 0px;
+  }
+
+  .single-line-content {
+    display: flex;
+    align-items: center; /* Vertically center items */
+    gap: 10px; /* Add spacing between items */
+    overflow-x: auto; /* Allow horizontal scrolling if content overflows */
+    white-space: nowrap; /* Prevent wrapping to the next line */
+  }
+
+  .title {
+    font-size: 14px; /* Example font size */
+    color: #fcf9f9; /* Example text color */
+    font-weight: bold; /* Make the title bold */
+  }
+
+  .separator {
+    font-size: 14px; /* Example font size */
+    color: #faf8f8; /* Example separator color */
+  }
+}

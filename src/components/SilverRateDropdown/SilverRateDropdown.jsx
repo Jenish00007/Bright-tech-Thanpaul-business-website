@@ -17,7 +17,7 @@ const SilverRateDropdownComponent = () => {
         });
         setLoading(false);
       } catch (err) {
-        setError('Failed to fetch prices');
+        setError('Rs:106');
         setLoading(false);
       }
     };
