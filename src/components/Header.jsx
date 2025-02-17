@@ -68,7 +68,7 @@
 //           </NavLink>
 //         </div>
 //       </div>
-  
+
 //     </>
 //   );
 // }
@@ -159,7 +159,7 @@
 // }
 
 // export default NavBar;
-import"./header.css";
+import "./header.css";
 import { useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { ReactTyped } from 'react-typed';
@@ -208,10 +208,13 @@ export default function Header() {
           {/* Logo */}
           <div className="logoContatiner" onClick={() => navigate('/')}>
             <img src="./assets/logo.png" alt="" style={{ width: '50px', height: 'auto', display: 'flex' }} />
-            <h2 className="text-white scale-up">
-              {" "}
+            <h2 style={{ fontSize: window.innerWidth < 768 ? '15px' : '20px' }}>
               <ReactTyped strings={["Dhanapal Jewellers"]} typeSpeed={100} loop />
             </h2>
+            {/* <h2 className="text-white scale-up">
+              {" "}
+              
+            </h2> */}
           </div>
         </div>
 
@@ -254,7 +257,7 @@ export default function Header() {
           </div>
         </div>
        */}
-      
+
     </>
   );
 }
