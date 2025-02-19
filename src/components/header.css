@@ -1,231 +1,113 @@
-/* .navbar {
-    background-color: #1f5156;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    position: sticky;
-    top: 0;
-    z-index: 20;
-  }
-  
-  .nav-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 80px;
-    max-width: 1500px;
-    position: relative;
-  }
-  
-  .nav-logo {
-    color: #f5b921;
-    align-items: center;
-    margin-left: 20px;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 2rem;
-    flex-grow: 1;
-  
-    display: flex;
-    align-items: center;
-    justify-items: center;
-  }
-  
-  .nav-logo .icon {
-    display: inline-block;
-    width: 3rem;
-    height: 3rem;
-    margin-left: 16px;
-  }
-  
-  .nav-menu {
-    display: flex;
-    list-style: none;
-    text-align: center;
-    margin-right: 2rem;
-  }
-  
-  .nav-links {
-    color: #fff;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    height: 100%;
-    border-bottom: 3px solid transparent;
-  }
- 
-  
-  .nav-item {
-    line-height: 40px;
-    margin-right: 1rem;
-  }
-  
-  .nav-item:after {
-    content: "";
-    display: block;
-    height: 3px;
-    width: 0;
-    background: transparent;
-    transition: width 0.7s ease, background-color 0.5s ease;
-  }
-  
-  .nav-item:hover:after {
-    width: 100%;
-    background: #ffdd40;
-  }
-  
-  .nav-item .active {
-    color: #ffdd40;
-    border: 1px solid #ffdd40;
-  }
-  
-  .nav-icon {
-    display: none;
-    color: #f5b921;
-  }
-  
-  .nav-icon .icon {
-    display: inline-block;
-    width: 2rem;
-    height: 2rem;
-  }
-  
-  @media screen and (max-width: 960px) {
-    .nav-menu {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      border-top: 1pxsolid #fff;
-      position: absolute;
-      top: 80px;
-      left: -110%;
-      opacity: 1;
-      transition: all 0.5s ease;
-    }
-  
-    .nav-menu.active {
-      background: #1f5156;
-      left: 0px;
-      opacity: 1;
-      transition: all 0.5s ease;
-      z-index: 1;
-    }
-    .nav-item .active {
-      color: #ffdd40;
-      border: none;
-    }
-    .nav-links {
-      padding: 1.5rem;
-      width: 100%;
-      display: table;
-    }
-  
-    .nav-logo .icon {
-      width: 2rem;
-      height: 2rem;
-    }
-  
-    .nav-icon {
-      display: block;
-      position: absolute;
-      top: 50%;
-      right: 0;
-      transform: translate(-100%, -50%);
-      width: 2rem;
-      height: 2rem;
-      cursor: pointer;
-      color: #ffdd40;
-    }
-  } */
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
 
-  /* Default Styles */
-.headerContainer {
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+}
+
+/* Logo Styles */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 40px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.brand-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Desktop Navbar */
+.desktop-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.desktop-nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #f39c12;  /* Change to any color for hover effect */
+}
+
+/* Dropdowns container */
+.GoldRateCointainer {
+  display: flex;
+  gap: 20px;
+}
+
+/* Mobile Navbar */
+.mobile-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 26px;
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  background-color: #333;
+  padding: 20px;
+  text-align: center;
+}
+
+.mobile-menu.open {
+  display: block;
+}
+
+.mobile-menu .nav-link {
+  display: block;
+  margin: 10px 0;
+}
+
+.mobile-menu .nav-link:hover {
+  color: #f39c12;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  .desktop-navbar {
+    display: none;  /* Hide desktop navbar */
+  }
+
+  .mobile-navbar {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
   }
-  
-  .headerLeft {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .menuBar {
-    display: none; /* Hide by default */
-    cursor: pointer;
-  }
-  
-  .navbarContent {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-  
-  .navbarIcons {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-  }
-  
-  .NavItem {
-    cursor: pointer;
-  }
-  
-  .GoldRateCointainer {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .toggleButton {
-    display: none; /* Hide by default */
-    background-color: #555;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin: 0px;
-  }
-  
-  /* Mobile Styles */
-  @media (max-width: 768px) {
-    .menuBar {
-      display: block; /* Show menu icon on mobile */
-    }
-  
-    .toggleButton {
-      display: block;
-       /* Show toggle button on mobile */
-    }
-  
-    .navbarContent {
-      display: none; /* Hide navbar content by default on mobile */
-      flex-direction: column;
-      position: absolute;
-      top: 60px; /* Adjust based on header height */
-      right: 20px;
-      background-color: #333;
-      padding: 10px;
-      border-radius: 5px;
-      gap: 10px;
-    }
-  
-    .navbarContent.hidden {
-      display: none; /* Hide when menu is closed */
-    }
-  
-    .navbarContent:not(.hidden) {
-      display: flex; /* Show when menu is open */
-    }
-  
-    .GoldRateCointainer {
-      flex-direction: column; /* Stack dropdowns vertically on mobile */
-      gap: 5px; /* Reduce gap between dropdowns */
-    }
-  }
+}

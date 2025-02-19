@@ -70,7 +70,7 @@ const Login = () => {
         </div>
 
         <button className ="login-button" type="submit">Login</button>
-        <a href="/forgot-password" className="forgot-password">Forgot password?</a>
+        {/* <a href="/forgot-password" className="forgot-password">Forgot password?</a> */}
       </form>
     </div>
   );

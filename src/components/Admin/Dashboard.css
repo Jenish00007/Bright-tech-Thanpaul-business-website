@@ -81,7 +81,7 @@
   padding: 20px;
   border-radius: 10px;
   text-align: center;
-  width: 22%;
+  /* width: 22%; */
   box-shadow: 0px 4px 6px rgba(255, 215, 0, 0.3);
   font-size: 18px;
   font-weight: bold;
@@ -120,7 +120,7 @@ td {
 /* 🖥️ Large screens (desktops) */
 @media (max-width: 1200px) {
   .card {
-    width: 30%; /* Adjust card width */
+    width: 100%; /* Adjust card width */
   }
 }
 
@@ -150,7 +150,7 @@ td {
   }
 
   .card {
-    width: 80%; /* Full width cards */
+    width: 100%; /* Full width cards */
     margin-bottom: 15px;
   }
 }
@@ -160,13 +160,17 @@ td {
   .sidebar {
     display: none; /* Hide sidebar by default on mobile */
     position: absolute;
-    left: 0;
+    left: 20px;
     top: 0;
-    width: 80%;
+    width: 100%;
     height: 100vh;
     background: black;
     z-index: 1000;
+    margin-left: 60px;
     flex-direction: column;
+    text-align: center;
+    align-items: center;
+    /* box-sizing:100% !important; */
   }
 
   .sidebar.show {
@@ -203,6 +207,7 @@ td {
 @media (max-width: 480px) {
   .sidebar {
     width: 100%; /* Full width sidebar */
+    box-sizing:100% !important;
   }
 
   .dashboard-cards {

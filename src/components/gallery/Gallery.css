@@ -1,22 +1,30 @@
-.gallery-row {
-    display: flex;
-    justify-content: center;
-    overflow: auto;
-  }
-  
-  .gallery-img {
-    width: 100%;
-    height: auto;
-    max-height: 300px; /* Adjust max height as needed */
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin-bottom: 15px;
-  }
-  .gallery-img:hover{
-    color: #494949 ;
-border-radius: 50px;
-border-color: #494949;
-transition: all 0.3s ease 0s;
-  }
-  
+.product-card {
+  border: 1px solid #ddd; /* Border around the card */
+  border-radius: 10px;     /* Rounded corners */
+  overflow: hidden;        /* Ensures no content overflows the border */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);  /* Optional shadow for better aesthetics */
+  transition: transform 0.3s ease-in-out;  /* Adds a hover effect */
+}
+
+.product-card:hover {
+  transform: scale(1.05);  /* Slightly scales up the card on hover */
+}
+
+.mdb-card-body {
+  padding: 1rem;
+}
+
+.mdb-card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.mdb-card-text {
+  font-size: 1rem;
+  color: #555;
+}
+
+.mdb-card img {
+  height: 250px;
+  object-fit: cover;
+}

@@ -9,7 +9,7 @@ import Blog from "../../components/Blog/Blog.jsx";
 import ZoomImage from '../About/about1.jsx';
 import Projects from '../../components/Projects/Projects.js';
 // import ProductCard from '../../components/ProductCard/ProductCard.js';
-import Gallery from '../../components/gallery/gallery.jsx';
+import ProductList from '../../components/gallery/gallery.jsx';
 import GoldRateDropdown from "../../components/GoldRateDropdown/GoldRateDropdown";
 import SilverRateDropdownComponent from "../../components/SilverRateDropdown/SilverRateDropdown";
 export default function Home() {
@@ -73,7 +73,7 @@ export default function Home() {
       <h3>Popular Products</h3>
       <section className='shop' data-aos="fade-up">
 
-        <Gallery />
+        <ProductList />
       </section>
       <section className="ShopByCategory" data-aos="fade-up">
         <h3>SHOP BY CATEGORY</h3>
