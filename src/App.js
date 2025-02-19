@@ -11,13 +11,15 @@ import CancellationPolicy from "../src/components/CancellationPolicy/Cancellatio
 import PrivacyPolicy from "../src/components/PrivacyPolicy/PrivacyPolicy";
 import RefundPolicy from "../src/components/RefundPolicy/RefundPolicy";
 //Admin Panel
+
+
 import Dashboard from "./components/Admin/Dashboard";
 import Users from './components/Admin/Users';
 import Products from './components/Admin/Products';
 import Orders from './components/Admin/Orders';
 import Notifications from './components/Admin/Notifications';
 import Login from "./components/Admin/Login";
-
+import ProductModal from "./components/Admin/ProductModal";
 function App() {
  
   var auth = localStorage.getItem("auth");
@@ -51,6 +53,7 @@ function App() {
         <Route path="/products" element={isAuthenticatedValue ? <Products /> : <Navigate to="/login" />} />
         <Route path="/orders"  element={isAuthenticatedValue ? <Orders /> : <Navigate to="/login" />} />
         <Route path="/notifications" element={<Notifications />} />
+        {/* <Route path="/productModal" element={<ProductModal />} /> */}
         </Routes>
         
       </div> 

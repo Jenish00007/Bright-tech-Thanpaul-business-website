@@ -116,3 +116,46 @@ input[type="checkbox"] {
 .icon-text {
   font-size: 14px; /* Adjust text size */
 }
+.add-product-section {
+  max-width: 750px; /* Small and centered */
+  margin: 30px auto; /* Centers the form */
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.add-product-section h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.add-product-section input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.add-product-section input[type="file"] {
+  border: none;
+}
+
+.add-product-section button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.add-product-section button:hover {
+  background-color: #0056b3;
+}

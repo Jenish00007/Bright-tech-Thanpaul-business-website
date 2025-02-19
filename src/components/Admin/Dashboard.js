@@ -5,9 +5,11 @@ import './Dashboard.css';
 // import Orders from './Orders';
 // import Users from './Users';
 import Products from './Products';
+import AddProduct from './Addproduct';
 
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState('products');
+  
   
   return (
     <div className="dashboard-container">
@@ -36,11 +38,12 @@ const Dashboard = () => {
             className={activeTab === 'products' ? 'active' : ''} 
             onClick={() => setActiveTab('products')}
           >Products</a>
-          {/* <a 
+          <a 
             href="#" 
-            className={activeTab === 'products' ? 'active' : ''} 
-            onClick={{handleAddProduct}}
-          >Add New Product</a> */}
+            className={activeTab === 'addproducts' ? 'active' : ''} 
+            onClick={() => setActiveTab('addproducts')}
+          >Add Product</a>
+          
 
         </nav>
       </div>
@@ -52,6 +55,7 @@ const Dashboard = () => {
         {/* {activeTab === 'orders' && <Orders />}
         {activeTab === 'users' && <Users />} */}
         {activeTab === 'products' && <Products />}
+        {activeTab === 'addproducts' && <AddProduct />}
       </div>
     </div>
   );

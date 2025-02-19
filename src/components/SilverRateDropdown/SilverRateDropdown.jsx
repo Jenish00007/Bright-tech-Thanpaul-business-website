@@ -5,7 +5,7 @@ const SilverRateDropdownComponent = () => {
   const [prices, setPrices] = useState({ gold: null, silver: null });
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
-
+  const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
     // Replace with your API endpoint
     const fetchPrices = async () => {
@@ -38,14 +38,26 @@ const SilverRateDropdownComponent = () => {
 
   return (
     <div className="dropdown-container">
-      <div className="rate-label"></div>
+      <div className="rate-label">Current Rates</div>
       <div className="dropdown">
-        <button className="silver-dropdown-toggle"style={{ background: 'linear-gradient(135deg, #C0C0C0, #A9A9A9)', transition: '0.3s' }} >
+        <button
+          className="dropdown-toggle"
+          onClick={() => setIsOpen(!isOpen)}
+          style={{
+            background: "linear-gradient(135deg, #C0C0C0, #A9A9A9)",
+            transition: "0.3s",
+          }}
+        >
           <span>Silver 1G: ₹ {prices.silver}</span>
-          {/* <span className={`dropdown-arrow ${isOpen ? 'open' : ''}`}>▼</span> */}
+          <span className={`dropdown-arrow ${isOpen ? "open" : ""}`}>▼</span>
         </button>
-        
-        
+        {isOpen && (
+          <ul className="dropdown-menu">
+            <li>Silver 24K: ₹ 000</li>
+            <li>Silver 22K: ₹ 000</li>
+            <li>Silver 18K: ₹ 000</li>
+          </ul>
+        )}
       </div>
     </div>
   );

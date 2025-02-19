@@ -10,7 +10,7 @@ const ProductModal = ({ product, type, onClose, onSave, onUpdate }) => {
   });
 
   const [imageFile, setImageFile] = useState(null);
-  const [previewImage, setPreviewImage] = useState(product?.image?.url || null);
+  const [previewImage, setPreviewImage] = useState(product?.image || null); // Fixed preview image
 
   // Handle input changes
   const handleChange = (e) => {
@@ -29,12 +29,18 @@ const ProductModal = ({ product, type, onClose, onSave, onUpdate }) => {
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (type === "add") {
-      await onSave(formData, imageFile);
-    } else if (type === "edit") {
-      await onUpdate({ ...formData, id: product.id }, imageFile);
+    console.log("Submitting:", formData, imageFile); // Debugging output
+
+    try {
+      if (type === "add") {
+        await onSave(formData, imageFile);
+      } else if (type === "edit") {
+        await onUpdate({ ...formData, id: product.id }, imageFile);
+      }
+      onClose(); // Close modal only if successful
+    } catch (error) {
+      console.error("Error submitting product:", error);
     }
-    onClose();
   };
 
   return (

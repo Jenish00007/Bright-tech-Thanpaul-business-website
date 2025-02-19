@@ -1,4 +1,4 @@
-/* SilverRateDropdown.css */
+/* SilverRateDropdown.css
 .silver-dropdown-container {
     display: flex;
     align-items: center;
@@ -77,4 +77,72 @@
     100% {
         box-shadow: 0 0 15px #C0C0C0, 0 0 25px #C0C0C0;
     }
-}
+} */
+.dropdown-container {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .rate-label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #444;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-toggle {
+    background: linear-gradient(135deg, #C0C0C0, #A9A9A9);
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+  }
+  
+  .dropdown-arrow {
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .dropdown-arrow.open {
+    transform: rotate(180deg);
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 10;
+  }
+  
+  .dropdown-menu li {
+    list-style: none;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #444;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .dropdown-menu li:hover {
+    background: #f4f4f4;
+  }
+  

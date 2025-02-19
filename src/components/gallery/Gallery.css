@@ -1,30 +1,76 @@
+.shop-container {
+  padding: 40px;
+  text-align: center;
+  background-color: transparent;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
 .product-card {
-  border: 1px solid #ddd; /* Border around the card */
-  border-radius: 10px;     /* Rounded corners */
-  overflow: hidden;        /* Ensures no content overflows the border */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);  /* Optional shadow for better aesthetics */
-  transition: transform 0.3s ease-in-out;  /* Adds a hover effect */
+  background: rgb(6, 6, 6);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(205, 205, 205, 0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .product-card:hover {
-  transform: scale(1.05);  /* Slightly scales up the card on hover */
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.mdb-card-body {
-  padding: 1rem;
-}
-
-.mdb-card-title {
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-.mdb-card-text {
-  font-size: 1rem;
-  color: #555;
-}
-
-.mdb-card img {
-  height: 250px;
+.product-image1 {
+  width: 100%;
+  height: 200px;
   object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-info {
+  padding: 10px 0;
+}
+
+.product-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+.product-price, .product-weight {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.buy-now-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.buy-now-btn:hover {
+  background: #0056b3;
+}
+
+.no-products {
+  font-size: 18px;
+  color: #777;
 }

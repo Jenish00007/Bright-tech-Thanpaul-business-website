@@ -1,11 +1,4 @@
-/* Global Styles */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-}
-
-.navbar-container {
+.headerContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -14,100 +7,154 @@ body {
   color: white;
 }
 
-/* Logo Styles */
-.logo {
+.headerLeft {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 
-.logo-img {
-  width: 40px;
-  height: auto;
-  margin-right: 10px;
+.menuBar {
+  display: none; /* Hide by default */
+  cursor: pointer;
 }
 
-.brand-title {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-/* Desktop Navbar */
-.desktop-navbar {
+.navbarContent {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 100%;
-}
-
-.desktop-nav-links {
-  display: flex;
   gap: 20px;
 }
 
-.nav-link {
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-  transition: color 0.3s ease;
+.navbarIcons {
+  display: flex;
+  gap: 20px;
+  list-style: none;
 }
 
-.nav-link:hover {
-  color: #f39c12;  /* Change to any color for hover effect */
+.NavItem {
+  cursor: pointer;
 }
 
-/* Dropdowns container */
 .GoldRateCointainer {
   display: flex;
-  gap: 20px;
+  gap: 10px;
 }
 
-/* Mobile Navbar */
-.mobile-navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
-.menu-toggle {
-  background: none;
-  border: none;
+.toggleButton {
+  display: none; /* Hide by default */
+  background-color: #555;
   color: white;
+  border: none;
+  padding: 10px;
   cursor: pointer;
-  font-size: 26px;
+  border-radius: 5px;
 }
 
-.mobile-menu {
-  display: none;
-  position: absolute;
-  top: 60px;
-  left: 0;
-  right: 0;
-  background-color: #333;
-  padding: 20px;
-  text-align: center;
-}
-
-.mobile-menu.open {
-  display: block;
-}
-
-.mobile-menu .nav-link {
-  display: block;
-  margin: 10px 0;
-}
-
-.mobile-menu .nav-link:hover {
-  color: #f39c12;
-}
-
-/* Media Query for Mobile Devices */
+/* Mobile Styles */
 @media (max-width: 768px) {
-  .desktop-navbar {
-    display: none;  /* Hide desktop navbar */
+  .menuBar {
+    display: block; /* Show menu icon on mobile */
   }
 
-  .mobile-navbar {
+  .toggleButton {
+    display: block; /* Show toggle button on mobile */
+  }
+
+  .navbarContent {
+    display: none; /* Hide navbar content by default on mobile */
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust based on header height */
+    right: 20px;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    gap: 10px;
+  }
+
+  .navbarContent.hidden {
+    display: none; /* Hide when menu is closed */
+  }
+
+  .navbarContent:not(.hidden) {
+    display: flex; /* Show when menu is open */
+  }
+
+  .GoldRateCointainer {
+    flex-direction: column; /* Stack dropdowns vertically on mobile */
+    gap: 5px; /* Reduce gap between dropdowns */
+  }
+}
+/* Ensure navbar is visible on small screens */
+.navbarContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+/* Hide navbar on small screens and show when menu is clicked */
+@media (max-width: 768px) {
+  .navbarContent {
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust according to your header height */
+    left: auto;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 10px 0;
+    text-align: center;
+    display: none;
+  }
+
+  .navbarContent.hidden {
+    display: none;
+  }
+
+  .navbarContent.show {
     display: flex;
   }
+
+  .navbarIcons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .NavItem {
+    padding: 10px;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  .NavItem:hover {
+    color: gold;
+  }
 }
+
+/* Ensure it's displayed below 450px */
+@media (max-width: 450px) {
+  .navbarIcons {
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .NavItem {
+    font-size: 16px;
+    padding: 12px;
+    width: 100%;
+    text-align: center;
+  }
+  .sideBarMenu {
+    color: aliceblue;
+    
+  }
+}
+
+
+
+
+

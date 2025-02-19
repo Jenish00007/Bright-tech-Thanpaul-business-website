@@ -1,18 +1,26 @@
-import { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
-import "./header.css";  // Assuming you're using a CSS file for styling
-import { FaBars, FaTimes } from "react-icons/fa"; // Icons for mobile navbar
-import { ReactTyped } from "react-typed";
+import"./header.css";
+import { useEffect, useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
+import { ReactTyped } from 'react-typed';
 import GoldRateDropdown from "./GoldRateDropdown/GoldRateDropdown";
 import SilverRateDropdownComponent from "./SilverRateDropdown/SilverRateDropdown";
-export default function Navbar() {
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);  // Check if screen width is mobile
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Update screen size on window resize
+export default function Header() {
+  const [isMenuClicked, setIsMenuClicked] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); // Adjust for mobile breakpoint
+  const navigate = useNavigate();
+
+  const handleMenu = () => {
+    setIsMenuClicked(!isMenuClicked);
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  };
+
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);  // Set isMobile based on screen size
+      setIsMobile(window.innerWidth <= 768); // Set to true if mobile screen
+      if (window.innerWidth > 768) {
+        setIsMenuClicked(false); // Close the menu if resized to desktop
+      }
     };
 
     window.addEventListener("resize", handleResize);
@@ -20,51 +28,72 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="navbar-container">
-      {/* Desktop Navbar */}
-      {!isMobile && (
-        <div className="desktop-navbar">
-          <div className="logo">
-            <img src="./assets/logo.png" alt="Logo" className="logo-img" />
-            <h2 style={{ fontSize: window.innerWidth < 768 ? '15px' : '20px' }}>
+    <>
+      <div className="headerContainer">
+        {/* Header Left Section (Always Visible) */}
+        <div className="headerLeft">
+          {/* Mobile Menu Icon */}
+          <div
+            className={isMenuClicked ? "expandMenu" : "menuBar"}
+            onClick={handleMenu}
+          >
+            <span className="sideBarMenu">
+              <div className="bar1"></div>
+              <div className="bar2"></div>
+              <div className="bar3"></div>
+            </span>
+          </div>
+
+          {/* Logo */}
+          <div className="logoContatiner" onClick={() => navigate('/')}>
+            <img src="./assets/logo.png" alt="" style={{ width: '50px', height: 'auto', display: 'flex' }} />
+            <h2 className="text-white scale-up">
+              {" "}
               <ReactTyped strings={["Dhanapal Jewellers"]} typeSpeed={100} loop />
             </h2>
           </div>
-         
+        </div>
+
+        {/* Toggle Button for Mobile */}
+        {isMobile && (
+          <button className="toggleButton" onClick={handleMenu}>
+            {isMenuClicked ? "Close" : "Menu"}
+          </button>
+        )}
+
+        {/* Navbar Content (Toggled on Mobile) */}
+        <div className={`navbarContent ${isMobile && !isMenuClicked ? "hidden" : ""}`}>
           {/* Gold and Silver Rate Dropdowns */}
           <div className="GoldRateCointainer">
             <GoldRateDropdown />
             <SilverRateDropdownComponent />
           </div>
-          <div className="desktop-nav-links">
-            <NavLink to="home" className="nav-link">Home</NavLink>
-            <NavLink to="about" className="nav-link">About</NavLink>
-            <NavLink to="contact" className="nav-link">Contact</NavLink>
+
+          {/* Navbar Icons */}
+          <div className="navbarIcons ">
+            <NavLink to="home">
+              <li className="NavItem">Home</li>
+            </NavLink>
+            <NavLink to="/about">
+              <li className="NavItem">About</li>
+            </NavLink>
+            <NavLink to="contact">
+              <li className="NavItem">Contact</li>
+            </NavLink>
           </div>
         </div>
-      )}
-
-      {/* Mobile Navbar */}
-      {isMobile && (
-        <div className="mobile-navbar">
-          <div className="logo">
-            <img src="./assets/logo.png" alt="Logo" className="logo-img" />
-            <h2 className="brand-title">Dhanapal Jewellers</h2>
+      </div>
+      {/* <div className="container-fluid">
+        <div className="row">
+          <div className="col-md-12">
+          <div className="GoldRateCointainer">
+            <GoldRateDropdown />
+            <SilverRateDropdownComponent />
           </div>
-
-          {/* Hamburger Menu Icon */}
-          <button className="menu-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            {isMenuOpen ? <FaTimes size={26} /> : <FaBars size={26} />}
-          </button>
-
-          {/* Mobile Menu Links */}
-          <div className={`mobile-menu ${isMenuOpen ? "open" : ""}`}>
-            <NavLink to="home" className="nav-link" onClick={() => setIsMenuOpen(false)}>Home</NavLink>
-            <NavLink to="about" className="nav-link" onClick={() => setIsMenuOpen(false)}>About</NavLink>
-            <NavLink to="contact" className="nav-link" onClick={() => setIsMenuOpen(false)}>Contact</NavLink>
           </div>
         </div>
-      )}
-    </nav>
+       */}
+      
+    </>
   );
 }

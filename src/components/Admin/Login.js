@@ -26,7 +26,7 @@ const Login = () => {
 
       // navigate('/dashboard');
       
-      if (email === "admin@gmail.com" && password === "bright123" && response.status === 200) {
+      if (email === "ADMIN@GMAIL.COM" && password === "bright123" && response.status === 200) {
         localStorage.setItem("auth", true);
         navigate('/dashboard'); // Redirect to dashboard
       } else {

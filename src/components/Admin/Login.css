@@ -89,6 +89,7 @@
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
     margin-top: 20px;
+    margin-left: auto;
     width: 100%; /* Make the button fill the container */
   }
   

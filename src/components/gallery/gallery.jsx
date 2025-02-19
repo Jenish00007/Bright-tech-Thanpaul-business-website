@@ -1,49 +1,39 @@
-import React, { useEffect, useState } from 'react';
-import { MDBContainer, MDBCol, MDBRow, MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardImage } from 'mdb-react-ui-kit';
-import './Gallery.css'; // Import CSS for custom styling
-
-import { fetchProducts } from "../service/hygraphService";
-
-const ProductList = () => {
+import React, { useEffect, useState } from "react";
+import"./Gallery.css";
+export default function ProductList() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    async function getProducts() {
-      const data = await fetchProducts();
-      setProducts(data);
-    }
-    getProducts();
+    fetch("https://thbackend.onrender.com/api/products") // Replace with actual API endpoint
+      .then((response) => response.json())
+      .then((data) => setProducts(data))
+      .catch((error) => console.error("Error fetching products:", error));
   }, []);
 
   return (
-    <MDBContainer>
-      <MDBRow className="gallery-row">
+    <section className="shop-container">
+      <h2 className="section-title">Shop By Category</h2>
+      <div className="product-grid">
         {products.length > 0 ? (
-          products.map((product, index) => (
-            <MDBCol key={index} lg={4} md={6} sm={12} className='mb-4 text-center'>
-              <MDBCard className="product-">
-                <MDBCardImage
-                  src={product.image ? product.image.url : "/placeholder.png"}
-                  position="top"
-                  alt={product.name}
-                  style={{ height: "250px", objectFit: "cover" }}  // Ensuring image size consistency
-                />
-                <MDBCardBody>
-                  <MDBCardTitle>{product.name}</MDBCardTitle>
-                  <MDBCardText>
-                    <strong>Price:</strong> {product.price} <br />
-                    <strong>Weight:</strong> {product.weight}
-                  </MDBCardText>
-                </MDBCardBody>
-              </MDBCard>
-            </MDBCol>
+          products.map((product) => (
+            <div key={product._id} className="product-card">
+              <img
+                src={product.image ? product.image : "/placeholder.png"}
+                alt={product.name}
+                className="product-image1"
+              />
+              <div className="product-info">
+                <h3 className="product-name">{product.name}</h3>
+                <p className="product-price">Price: ${product.price}</p>
+                <p className="product-weight">Weight: {product.weight} kg</p>
+                {/* <button className="buy-now-btn">Buy Now</button> */}
+              </div>
+            </div>
           ))
         ) : (
-          <p className="text-center">No products found</p>
+          <p className="no-products">No products found</p>
         )}
-      </MDBRow>
-    </MDBContainer>
+      </div>
+    </section>
   );
 }
-
-export default ProductList;
