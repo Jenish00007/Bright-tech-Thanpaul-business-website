@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import banner1 from '../Projects/images/1.jpg';
-import banner2 from '../Projects/images/2.jpg';
-import banner3 from '../Projects/images/3.jpg';
-import banner4 from '../Projects/images/4.jpg';
-import banner5 from '../Projects/images/5.jpg';
-import banner6 from '../Projects/images/6.jpg';
-import banner7 from '../Projects/images/7.jpg';
+import banner1 from '../Projects/images/1.webp';
+import banner2 from '../Projects/images/2.webp';
+import banner3 from '../Projects/images/3.webp';
+import banner4 from '../Projects/images/4.webp';
+import banner5 from '../Projects/images/5.webp';
+import banner6 from '../Projects/images/6.webp';
+import banner7 from '../Projects/images/7.webp';
 
 import './Projects.css';
 

@@ -71,7 +71,7 @@ const ZoomImage = ({ scale = 4.5, duration = 1, ease = "power2.out" }) => {
   return (
     <>
       <section className="aboutFounder">
-        <img ref={firstImageRef} src="\assets\shop1.png" alt="Founder Photo" width="300px" />
+        <img ref={firstImageRef} src="\assets\shop1.webp" alt="Founder Photo" width="300px" />
         <div className="textContent" ref={firstTextRef}>
           <h3>About the Founder</h3>
           <h5>Dhanapal Jewellers</h5>
@@ -89,7 +89,7 @@ const ZoomImage = ({ scale = 4.5, duration = 1, ease = "power2.out" }) => {
             The store is known for its exclusive collection of 22KT gold jewelry, silver items, and wedding essentials. Customers can find personalized pieces that cater to every occasion, from engagements to milestone celebrations.
           </p>
         </div>
-        <img ref={secondImageRef} src="\assets\shop.png" alt="Founder Photo" width="300px" />
+        <img ref={secondImageRef} src="\assets\shop.webp" alt="Founder Photo" width="300px" />
       </section>
     </>
   );

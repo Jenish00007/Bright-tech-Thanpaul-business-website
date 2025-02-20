@@ -46,7 +46,7 @@ export default function Header() {
 
           {/* Logo */}
           <div className="logoContatiner" onClick={() => navigate('/')}>
-            <img src="./assets/logo.png" alt="" style={{ width: '50px', height: 'auto', display: 'flex' }} />
+            <img src="./assets/logo.webp" alt="" style={{ width: '50px', height: 'auto', display: 'flex' }} />
             <h2 className="text-white scale-up">
               {" "}
               <ReactTyped strings={["Dhanapal Jewellers"]} typeSpeed={100} loop />

@@ -45,7 +45,7 @@ const ZoomImage = ({scale = 4.5, duration = 1, ease = "power2.out" }) => {
 
                 <img
                     ref={imageRef}
-                    src="\assets\shop.png" width="300px"
+                    src="\assets\shop.webp" width="300px"
                     alt=""
                 />
             </section>

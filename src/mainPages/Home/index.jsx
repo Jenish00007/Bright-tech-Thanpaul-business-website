@@ -24,22 +24,22 @@ export default function Home() {
     {
       _id: '1',
       categoryName: "necklace",
-      thumbnail: "/assets/categoryIcon/necklace.png",
+      thumbnail: "/assets/categoryIcon/necklace.webp",
     },
     {
       _id: '2',
       categoryName: "bracelet",
-      thumbnail: "/assets/categoryIcon/bracelet.png",
+      thumbnail: "/assets/categoryIcon/bracelet.webp",
     },
     {
       _id: '3',
       categoryName: "ring",
-      thumbnail: "/assets/categoryIcon/ring.png",
+      thumbnail: "/assets/categoryIcon/ring.webp",
     },
     {
       _id: '4',
       categoryName: "earring",
-      thumbnail: "/assets/categoryIcon/earring.png"
+      thumbnail: "/assets/categoryIcon/earring.webp"
     }
   ];
   return (
@@ -104,8 +104,8 @@ export default function Home() {
           </div>
         </div>
         <div className="imageContent">
-          <img className="bigImage" src='\assets\model2.jpg' width="400px" />
-          <img className="smallImage" src='\assets\hands.jpg' alt="" height="200px" />
+          <img className="bigImage" src='\assets\model2.webp' width="400px" />
+          <img className="smallImage" src='\assets\hands.webp' alt="" height="200px" />
         </div>
       </section>
       <div className="whyUswhole">
@@ -113,7 +113,7 @@ export default function Home() {
           <p>BEST IN BUSINESS</p>
           <h3>Why Choose Us</h3>
           <div className="whyusContent">
-            <img className="middleImage" src="\assets\model3.jpg" alt="" />
+            <img className="middleImage" src="\assets\model3.webp" alt="" />
             <div className="whyUsDescription">
               <div data-aos="fade-up" data-aos-delay="200">
                 <img src="\assets\whyUsIcons\percent-solid.svg" alt="big discount" />

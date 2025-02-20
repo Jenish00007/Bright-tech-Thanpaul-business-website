@@ -39,8 +39,15 @@ const Footer = () => {
       </div>
 
       <div style={{ textAlign: "center", fontSize: "14px", marginTop: "20px", borderTop: "1px solid #ffffff", paddingTop: "10px" }}>
-        &copy; {new Date().getFullYear()} Brightech Software Solution
+        <a
+          href="https://www.brightechsoftware.com/"
+          target="_blank"
+          style={{ textDecoration: "none", color: "inherit" }}
+        >
+          &copy; {new Date().getFullYear()} Brightech Software Solution
+        </a>
       </div>
+
     </footer>
   );
 };

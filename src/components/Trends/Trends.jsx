@@ -14,8 +14,8 @@ function Trends() {
       </div>
     </div>
     <div className="imageContent">
-      <img className="bigImage" src='\assets\model2.jpg' width="400px" />
-      <img className="smallImage" src='\assets\hands.jpg' alt="" height="200px" />
+      <img className="bigImage" src='\assets\model2.webp' width="400px" />
+      <img className="smallImage" src='\assets\hands.webp' alt="" height="200px" />
     </div>
   </section>
   )

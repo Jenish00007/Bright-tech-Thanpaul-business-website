@@ -33,7 +33,7 @@ const blogPosts = [
     date: "February 5, 2024",
     tags: ["Trends", "Design"],
     excerpt: "Explore the latest innovations and aesthetic movements reshaping contemporary jewelry design.",
-    image: "assets/pic_3.jpg"
+    image: "assets/pic_3.webp"
   }
 ];
 

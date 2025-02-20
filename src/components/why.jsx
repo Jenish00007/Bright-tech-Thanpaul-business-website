@@ -142,7 +142,7 @@ function WhyUs() {
                     <img
                         ref={(el) => (sectionsRef.current[2] = el)}
                         className="middleImage scroll-animation"
-                        src="/assets/model3.jpg"
+                        src="/assets/model3.webp"
                         alt="Model"
                     />
 

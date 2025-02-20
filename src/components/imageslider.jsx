@@ -5,13 +5,13 @@ export const CarouselWithControlsExample = () => {
   return (
     <CCarousel controls>
       <CCarouselItem>
-        <CImage className="d-block w-100" src="../../assets/bg.jpeg" alt="slide 1" />
+        <CImage className="d-block w-100" src="../../assets/bg.webp" alt="slide 1" />
       </CCarouselItem>
       <CCarouselItem>
-        <CImage className="d-block w-100" src="../../assets/model2.jpg" alt="slide 2" />
+        <CImage className="d-block w-100" src="../../assets/model2.webp" alt="slide 2" />
       </CCarouselItem>
       <CCarouselItem>
-        <CImage className="d-block w-100" src="../../assets/hero.jpg" alt="slide 3" />
+        <CImage className="d-block w-100" src="../../assets/hero.webp" alt="slide 3" />
       </CCarouselItem>
     </CCarousel>
   )

@@ -9,7 +9,7 @@ function WhyChooseUs() {
     <p>BEST IN BUSINESS</p>
     <h4>Why Choose Us</h4>
     <div className="whyusContent">
-      <img className="middleImage" src="\assets\model3.jpg" alt="" />
+      <img className="middleImage" src="\assets\model3.webp" alt="" />
       <div className="whyUsDescription">
         <div data-aos="fade-up" data-aos-delay="200">
           <img src="\assets\whyUsIcons\percent-solid.svg" alt="big discount" />

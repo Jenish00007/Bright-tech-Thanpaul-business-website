@@ -1,7 +1,7 @@
 .aboutPage .heading {
   height: 66vh;
   width: 100%;
-  background: url(/public/assets/bg.jpeg);
+  background: url(/public/assets/bg.webp);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
