@@ -89,7 +89,7 @@ h4 {
 .ShopByCategory p,
 .categoryBox {
   font-family: abel;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
 }
 
 .categoryBox div:hover {

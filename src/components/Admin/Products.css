@@ -112,6 +112,17 @@ input[type="checkbox"] {
   gap: 5px; /* Adjust spacing between icon and text */
   cursor: pointer;
 }
+.success-message {
+  color: green;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}
 
 .icon-text {
   font-size: 14px; /* Adjust text size */

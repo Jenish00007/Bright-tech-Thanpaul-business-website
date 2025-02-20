@@ -125,7 +125,7 @@ section {
 li {
   list-style: none;
   font-family: abel;
-  text-transform: capitalize;
+ 
 }
 
 .sideNav ul {
@@ -262,7 +262,7 @@ li {
   color: #fff;
   font: 500 0.9em/1 "abel", sans-serif;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  text-transform: capitalize;
+
   text-align: center;
   background-color: #1b0f19;
 }

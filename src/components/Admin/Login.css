@@ -21,11 +21,17 @@
     border: 2px solid #FFD700; 
     box-sizing: border-box; 
     font-weight: bold;
+    text-transform: none !important;
   }
 
   /* .login-container h2 { */
+  label {
+    display: block;
+    
+    text-align: left;  /* Left-align the label text */
+    padding: 5px;
+  }
 
-  
   /* Header Styling */
  .dashboard-header h2  {
 
@@ -33,6 +39,7 @@
     font-size: 20px;
     color: #FFD700; 
     font-weight: bold;
+    
   }
   /* Header Styling */
 
@@ -42,29 +49,53 @@
     /* display: flex; */
     flex-direction: column;
     gap: 15px; /* Space between form elements */
+    text-transform: none !important;
   }
-  
-  /* Input fields with golden border and black background */
-  .login-container input {
-    margin: 0;
-    padding: 14px;
-    border: 2px solid #444;
-    border-radius: 8px;
-    font-size: 16px;
-    outline: none;
-    background-color: #333; 
-    color: #fff; 
-    width: 100%;
-    box-sizing: border-box; 
-    transition: all 0.3s ease;
-  }
+  /* Add these rules to your Login.css file */
+.login-container input {
+  margin: 0;
+  padding: 14px;
+  border: 2px solid #444;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  background-color: #333;
+  color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  text-transform: none !important;
+  -webkit-text-transform: none !important;
+  -moz-text-transform: none !important;
+  -ms-text-transform: none !important;
+  -o-text-transform: none !important;
+  transform: none !important;
+}
+
+/* Add this rule to prevent any text transformation globally for inputs */
+input, input[type="text"], input[type="password"] {
+  text-transform: none !important;
+  -webkit-text-transform: none !important;
+  -moz-text-transform: none !important;
+  -ms-text-transform: none !important;
+  -o-text-transform: none !important;
+  transform: none !important;
+}
+
+/* Ensure no text transformation on form elements */
+form * {
+  text-transform: none !important;
+}
   
   /* Focus effect for inputs */
   .login-container input:focus {
     border-color: #FFD700; 
     box-shadow: 0 0 10px rgba(255, 215, 0, 0.5); 
+    text-transform: none !important;
   }
-  
+  .login-container {
+    text-transform: none !important;
+}
   /* Error message styling */
   .error-message {
     color: red;
