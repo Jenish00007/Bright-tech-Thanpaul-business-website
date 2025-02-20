@@ -38,10 +38,10 @@ const GoldRateDropdown = () => {
 
   return (
     <div className="dropdown-container">
-      <div className="rate-label">Today's Rate:</div>
+      {/* <div className="rate-label">Today's Rate:</div> */}
       <div className="dropdown">
         <button className="dropdown-toggle" >
-          <span>GOLD 1G: ₹ {prices.gold}</span>
+          <span>GOLD 1G: ₹{prices.gold}</span>
           {/* <span className={`dropdown-arrow ${isOpen ? 'open' : ''}`}>▼</span> */}
         </button>
         

@@ -1,7 +1,7 @@
 /* Base Header Styles */
 .headerContainer {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 10px 20px;
   background-color: #333;
@@ -10,34 +10,34 @@
 }
 
 .headerLeft {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  /* display: flex; */
+  /* align-items: center; */
+  /* gap: 10px; */
 }
 
 .menuBar {
-  display: none; /* Hidden by default */
-  cursor: pointer;
+  /* display: none; 
+  cursor: pointer; */
 }
 
 .navbarContent {
-  display: flex;
+  /* display: flex;
   align-items: center;
   gap: 20px;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease; */
 }
 
 .navbarIcons {
-  display: flex;
+  /* display: flex;
   gap: 20px;
-  list-style: none;
+  list-style: none; */
 }
 
 .NavItem {
-  cursor: pointer;
+  /* cursor: pointer;
   color: white;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 16px; */
 }
 
 .NavItem:hover {
@@ -45,18 +45,18 @@
 }
 
 .GoldRateCointainer {
-  display: flex;
-  gap: 10px;
+  /* display: flex; */
+  /* gap: 10px; */
 }
 
 .toggleButton {
-  display: none; /* Hidden by default */
+  /* display: none;
   background-color: #555;
   color: white;
   border: none;
-  padding: 10px;
+ 
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 5px; */
 }
 
 /* Mobile Styles */
@@ -66,7 +66,7 @@
   }
 
   .toggleButton {
-    display: block; /* Show toggle button on mobile */
+    display: block; 
     background-color: #444;
     color: white;
     padding: 12px 16px;
@@ -125,13 +125,13 @@
   .navbarIcons {
     flex-direction: column;
     align-items: center;
-    width: 100%;
+ 
   }
 
   .NavItem {
     font-size: 16px;
-    padding: 12px;
-    width: 100%;
+    /* padding: 12px; */
+    /* width: 100%; */
     text-align: center;
   }
 
@@ -148,7 +148,7 @@
 .navbarContent {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  
   gap: 20px;
   transition: all 0.3s ease;
 }

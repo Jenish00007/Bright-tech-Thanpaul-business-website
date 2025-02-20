@@ -48,7 +48,7 @@ const SilverRateDropdownComponent = () => {
             transition: "0.3s",
           }}
         >
-          <span>Silver 1G: ₹ {prices.silver}</span>
+          <span>Silver 1G: ₹{prices.silver}</span>
           <span className={`dropdown-arrow ${isOpen ? "open" : ""}`}>▼</span>
         </button>
         {isOpen && (
