@@ -38,7 +38,7 @@ const SilverRateDropdownComponent = () => {
 
   return (
     <div className="dropdown-container">
-      <div className="rate-label">Current Rates</div>
+      <div className="rate-label"></div>
       <div className="dropdown">
         <button
           className="dropdown-toggle"
