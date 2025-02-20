@@ -1,3 +1,4 @@
+/* Base Header Styles */
 .headerContainer {
   display: flex;
   justify-content: space-between;
@@ -5,6 +6,7 @@
   padding: 10px 20px;
   background-color: #333;
   color: white;
+  /* position: relative; */
 }
 
 .headerLeft {
@@ -14,7 +16,7 @@
 }
 
 .menuBar {
-  display: none; /* Hide by default */
+  display: none; /* Hidden by default */
   cursor: pointer;
 }
 
@@ -22,6 +24,7 @@
   display: flex;
   align-items: center;
   gap: 20px;
+  transition: all 0.3s ease;
 }
 
 .navbarIcons {
@@ -32,6 +35,13 @@
 
 .NavItem {
   cursor: pointer;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.NavItem:hover {
+  color: gold;
 }
 
 .GoldRateCointainer {
@@ -40,7 +50,7 @@
 }
 
 .toggleButton {
-  display: none; /* Hide by default */
+  display: none; /* Hidden by default */
   background-color: #555;
   color: white;
   border: none;
@@ -50,69 +60,46 @@
 }
 
 /* Mobile Styles */
-@media (max-width: 768px) {
+@media (max-width: 758px) {
   .menuBar {
     display: block; /* Show menu icon on mobile */
   }
 
   .toggleButton {
     display: block; /* Show toggle button on mobile */
+    background-color: #444;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 5px;
   }
 
   .navbarContent {
-    display: none; /* Hide navbar content by default on mobile */
+    display: none; /* Initially hide navbar content on mobile */
     flex-direction: column;
     position: absolute;
     top: 60px; /* Adjust based on header height */
-    right: 20px;
-    background-color: #333;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
     padding: 10px;
     border-radius: 5px;
     gap: 10px;
+    width: 100%;
+    text-align: center;
   }
 
   .navbarContent.hidden {
-    display: none; /* Hide when menu is closed */
+    display: none; /* Hidden when menu is closed */
   }
 
-  .navbarContent:not(.hidden) {
+  .navbarContent.show {
     display: flex; /* Show when menu is open */
   }
 
   .GoldRateCointainer {
     flex-direction: column; /* Stack dropdowns vertically on mobile */
     gap: 5px; /* Reduce gap between dropdowns */
-  }
-}
-/* Ensure navbar is visible on small screens */
-.navbarContent {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  transition: all 0.3s ease;
-}
-
-/* Hide navbar on small screens and show when menu is clicked */
-@media (max-width: 768px) {
-  .navbarContent {
-    flex-direction: column;
-    position: absolute;
-    top: 60px; /* Adjust according to your header height */
-    left: auto;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    padding: 10px 0;
-    text-align: center;
-    display: none;
-  }
-
-  .navbarContent.hidden {
-    display: none;
-  }
-
-  .navbarContent.show {
-    display: flex;
+    font-size: 14px; /* Make font size smaller for Gold and Silver */
   }
 
   .navbarIcons {
@@ -121,10 +108,10 @@
   }
 
   .NavItem {
-    padding: 10px;
+    padding: 12px;
     font-size: 18px;
-    color: white;
-    text-decoration: none;
+    width: 100%;
+    text-align: center;
     transition: 0.3s;
   }
 
@@ -133,10 +120,9 @@
   }
 }
 
-/* Ensure it's displayed below 450px */
-@media (max-width: 450px) {
+/* Adjust for very small screen sizes (below 450px) */
+@media (max-width: 400px) {
   .navbarIcons {
-    /* display: flex; */
     flex-direction: column;
     align-items: center;
     width: 100%;
@@ -148,13 +134,21 @@
     width: 100%;
     text-align: center;
   }
+
   .sideBarMenu {
     color: aliceblue;
-    
+  }
+
+  .GoldRateCointainer {
+    font-size: 12px; /* Further reduce font size on very small screens */
   }
 }
 
-
-
-
-
+/* Smooth transition for navbar content on mobile */
+.navbarContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
