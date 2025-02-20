@@ -12,7 +12,7 @@ export default function ProductList() {
 
   return (
     <section className="shop-container">
-      <h2 className="section-title">Shop By Category</h2>
+     
       <div className="product-grid">
         {products.length > 0 ? (
           products.map((product) => (
@@ -22,10 +22,11 @@ export default function ProductList() {
                 alt={product.name}
                 className="product-image1"
               />
-              <div className="product-info">
+              
                 <h3 className="product-name">{product.name}</h3>
-                <p className="product-price">Price: ${product.price}</p>
-                <p className="product-weight">Weight: {product.weight} kg</p>
+                <div className="product-info">
+                <p className="product-price">₹ {product.price}</p>
+                <p className="product-weight">{product.weight} kg</p>
                 {/* <button className="buy-now-btn">Buy Now</button> */}
               </div>
             </div>

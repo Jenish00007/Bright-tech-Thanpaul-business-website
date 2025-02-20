@@ -40,14 +40,26 @@
 }
 
 .product-info {
-  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;  /* Distribute items with space between them */
+  padding: 5px;
+  align-items: center;  /* Vertically align items */
+}
+
+.product-price,
+.product-weight {
+  font-size: 14px;
+  color: #ffffff;
 }
 
 .product-name {
   font-size: 18px;
   font-weight: bold;
   color: #ffffff;
-  margin-bottom: 5px;
+
+  text-align: start; 
+  padding: 5px;
+  margin-top: 10px;
 }
 
 .product-price, .product-weight {
