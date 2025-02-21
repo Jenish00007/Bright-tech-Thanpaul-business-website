@@ -16,7 +16,7 @@ export default function ProductList() {
       <div className="product-grid">
         {products.length > 0 ? (
           products.map((product) => (
-            <div key={product._id} className="product-card">
+            <div key={product.id} className="product-card">
               <img
                 src={product.image ? product.image : "/placeholder.png"}
                 alt={product.name}

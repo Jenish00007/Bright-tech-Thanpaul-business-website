@@ -17,7 +17,7 @@ import Products from './components/Admin/Products';
 import Orders from './components/Admin/Orders';
 import Notifications from './components/Admin/Notifications';
 import Login from "./components/Admin/Login";
-
+import ScrollToTop from "./components/scroll";
 function App() {
  
   var auth = localStorage.getItem("auth");
@@ -34,7 +34,9 @@ function App() {
      
 
       <div className="mainApp">
+       <ScrollToTop />
         <Routes>
+          
           <Route path="/" element={<Home />}/>
           <Route path="/home" element={<Home />}/>
           <Route path="/about" element={<About />}/>
