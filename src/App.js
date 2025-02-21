@@ -11,15 +11,13 @@ import CancellationPolicy from "../src/components/CancellationPolicy/Cancellatio
 import PrivacyPolicy from "../src/components/PrivacyPolicy/PrivacyPolicy";
 import RefundPolicy from "../src/components/RefundPolicy/RefundPolicy";
 //Admin Panel
-
-
 import Dashboard from "./components/Admin/Dashboard";
 import Users from './components/Admin/Users';
 import Products from './components/Admin/Products';
 import Orders from './components/Admin/Orders';
 import Notifications from './components/Admin/Notifications';
 import Login from "./components/Admin/Login";
-import ProductModal from "./components/Admin/ProductModal";
+
 function App() {
  
   var auth = localStorage.getItem("auth");
@@ -47,13 +45,12 @@ function App() {
           <Route path="/contact" element={<Contact />}/>
 
           {/* Admin Panel */}
-          <Route path="/admin" element={<Login />}  />
-          <Route path="/dashboard" element={isAuthenticatedValue ? <Dashboard /> : <Navigate to="/admin" />} />
-          <Route path="/users"  element={isAuthenticatedValue ? <Users /> : <Navigate to="/admin" />} />
-        <Route path="/products" element={isAuthenticatedValue ? <Products /> : <Navigate to="/admin" />} />
-        <Route path="/orders"  element={isAuthenticatedValue ? <Orders /> : <Navigate to="/admin" />} />
+          <Route path="/login" element={<Login />}  />
+          <Route path="/dashboard" element={isAuthenticatedValue ? <Dashboard /> : <Navigate to="/login" />} />
+          <Route path="/users"  element={isAuthenticatedValue ? <Users /> : <Navigate to="/login" />} />
+        <Route path="/products" element={isAuthenticatedValue ? <Products /> : <Navigate to="/login" />} />
+        <Route path="/orders"  element={isAuthenticatedValue ? <Orders /> : <Navigate to="/login" />} />
         <Route path="/notifications" element={<Notifications />} />
-        {/* <Route path="/productModal" element={<ProductModal />} /> */}
         </Routes>
         
       </div> 
