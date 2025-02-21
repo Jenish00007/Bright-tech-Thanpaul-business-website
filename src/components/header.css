@@ -1,7 +1,7 @@
 /* Base Header Styles */
 .headerContainer {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
   background-color: #333;
@@ -10,9 +10,15 @@
 }
 
 .headerLeft {
-  /* display: flex; */
-  /* align-items: center; */
-  /* gap: 10px; */
+  display: flex; 
+  align-items: center;
+  gap: 10px;
+}
+.menuIcon {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  cursor: pointer;
 }
 
 .menuBar {
@@ -21,8 +27,8 @@
 }
 .logoContatiner {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-evenly;
+  align-items: flex-start;
   width: 100%;
 }
 
@@ -42,8 +48,8 @@
 .NavItem {
   /* cursor: pointer;
   color: white;
-  text-decoration: none;
-  font-size: 16px; */
+  text-decoration: none; */
+  font-size: 12px;
 }
 
 .NavItem:hover {

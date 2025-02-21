@@ -71,9 +71,9 @@ section {
 
 .headerLeft {
   display: flex;
-  padding-right: 5px;
-  gap: 4px;
-  align-items: center;
+  /* padding-right: 5px;
+  gap: 4px; */
+  /* align-items: center; */
 }
 
 .logoContatiner p {

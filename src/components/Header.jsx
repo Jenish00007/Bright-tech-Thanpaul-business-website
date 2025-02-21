@@ -4,10 +4,11 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { ReactTyped } from 'react-typed';
 import GoldRateDropdown from "./GoldRateDropdown/GoldRateDropdown";
 import SilverRateDropdownComponent from "./SilverRateDropdown/SilverRateDropdown";
+import { MenuOutlined } from '@ant-design/icons'; 
 
 export default function Header() {
   const [isMenuClicked, setIsMenuClicked] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); // Adjust for mobile breakpoint
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 758); // Adjust for mobile breakpoint
   const navigate = useNavigate();
 
   const handleMenu = () => {
@@ -17,8 +18,8 @@ export default function Header() {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768); // Set to true if mobile screen
-      if (window.innerWidth > 768) {
+      setIsMobile(window.innerWidth <= 758); // Set to true if mobile screen
+      if (window.innerWidth > 758) {
         setIsMenuClicked(false); // Close the menu if resized to desktop
       }
     };
@@ -33,17 +34,14 @@ export default function Header() {
         {/* Header Left Section (Always Visible) */}
         <div className="headerLeft">
           {/* Mobile Menu Icon */}
-          <div
-            className={isMenuClicked ? "expandMenu" : "menuBar"}
-            onClick={handleMenu}
-          >
-            <span className="sideBarMenu">
-              <div className="bar1"></div>
-              <div className="bar2"></div>
-              <div className="bar3"></div>
-            </span>
-          </div>
+          
 
+          {isMobile && (
+            <div className="menuIcon" onClick={handleMenu}>
+              <MenuOutlined style={{ fontSize: '30px', color: 'white' }} /> {/* Ant Design Icon */}
+            </div>
+          )}
+      
           {/* Logo */}
           <div className="logoContatiner" onClick={() => navigate('/')}>
             <img src="./assets/logo.webp" alt="" style={{ width: '50px', height: 'auto', display: 'flex' }} />
@@ -52,14 +50,10 @@ export default function Header() {
               <ReactTyped strings={["Dhanapal Jewellers"]} typeSpeed={100} loop />
             </h2>
           </div>
+            {/* Toggle Button for Mobile */}
+       
         </div>
 
-        {/* Toggle Button for Mobile */}
-        {isMobile && (
-          <button className="toggleButton" onClick={handleMenu}>
-            {isMenuClicked ? "Close" : "Menu"}
-          </button>
-        )}
 
         {/* Navbar Content (Toggled on Mobile) */}
         <div className={`navbarContent ${isMobile && !isMenuClicked ? "hidden" : ""}`}>
