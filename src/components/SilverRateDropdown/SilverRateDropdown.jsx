@@ -40,8 +40,8 @@ const SilverRateDropdownComponent = () => {
     <div className="silver-dropdown-container">
       <div className="silver-rate-label"></div>
       <div className="silver-dropdown">
-        <button
-          className="silver-dropdown-toggle"
+        <button 
+          className="silver-dropdown-toggle dropdown-toggle"
           onClick={() => setIsOpen(!isOpen)}
           style={{
             background: "linear-gradient(135deg, #C0C0C0, #A9A9A9)",
@@ -49,7 +49,7 @@ const SilverRateDropdownComponent = () => {
           }}
         >
           <span>Silver 1G: ₹{prices.silver}</span>
-          <span className={`dropdown-arrow ${isOpen ? "open" : ""}`}>▼</span>
+          {/* <span className={`dropdown-arrow ${isOpen ? "open" : ""}`}>▼</span> */}
         </button>
         {isOpen && (
           <ul className="silver-dropdown-menu">

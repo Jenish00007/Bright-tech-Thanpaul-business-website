@@ -449,11 +449,15 @@ h4 {
 @media only screen and (max-width: 767px) {
   .mobile-only-section {
     display: block;
-    background-color:transparent; /* Example background color */
-    padding: 10px; /* Example padding */
+    display: flex; /* Use flex for centering */
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+    background-color: transparent;
+  
     border-radius: 8px; /* Example border radius */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Example shadow */
-    margin: 0px;
+    margin: 0;
+  padding: 10px; 
   }
 
   .single-line-content {
@@ -462,8 +466,11 @@ h4 {
     gap: 10px; /* Add spacing between items */
     overflow-x: auto; /* Allow horizontal scrolling if content overflows */
     white-space: nowrap; /* Prevent wrapping to the next line */
+    justify-content: center;
   }
-
+  .GoldRateDropdown, .SilverRateDropdownComponent {
+    margin: 0 5px; /* Adjust spacing between dropdowns */
+  }
   .title {
     font-size: 14px; /* Example font size */
     color: #fcf9f9; /* Example text color */

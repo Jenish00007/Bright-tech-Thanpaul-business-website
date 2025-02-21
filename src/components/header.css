@@ -19,6 +19,12 @@
   /* display: none; 
   cursor: pointer; */
 }
+.logoContatiner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 
 .navbarContent {
   /* display: flex;
@@ -50,15 +56,12 @@
 }
 
 .toggleButton {
-  /* display: none;
-  background-color: #555;
+  display: block;
+  background-color: #444;
   color: white;
-  border: none;
- 
-  cursor: pointer;
-  border-radius: 5px; */
+  padding: 12px 16px;
+  border-radius: 5px;
 }
-
 /* Mobile Styles */
 @media (max-width: 758px) {
   .menuBar {

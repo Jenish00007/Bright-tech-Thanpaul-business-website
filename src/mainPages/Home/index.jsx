@@ -51,7 +51,7 @@ export default function Home() {
             <div className="single-line-content">
               <span className="title"></span>
               <GoldRateDropdown />
-              <span className="separator">||</span>
+              <span className="separator"></span>
               <SilverRateDropdownComponent />
             </div>
           </div>
