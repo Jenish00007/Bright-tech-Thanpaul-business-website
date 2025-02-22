@@ -15,7 +15,7 @@ const Login = () => {
         try {
             const response = { email: email, password: password, status: 200 };
 
-            if (email === "admin@gmail.com" && password === "Bright@123" && response.status === 200) {
+            if (email === "ADMIN" && password === "0000" && response.status === 200) {
                 localStorage.setItem("auth", true);
                 navigate('/dashboard');
             } else {
@@ -39,20 +39,14 @@ const Login = () => {
             <p>Login to Admin Panel</p>
             <form onSubmit={handleSubmit}>
                 <div>
-                    <label htmlFor="email">Email:</label>
+                    <label htmlFor="email">User Name:</label>
                     <input
                         type="text"
                         id="email"
                         value={email}
                         onChange={(e) => handleInputChange(e, setEmail)}
                         required
-                        style={{
-                            textTransform: 'none',
-                            WebkitTextTransform: 'none',
-                            MozTextTransform: 'none',
-                            msTransform: 'none',
-                            OTransform: 'none'
-                        }}
+                       
                     />
                 </div>
 
@@ -64,13 +58,7 @@ const Login = () => {
                         value={password}
                         onChange={(e) => handleInputChange(e, setPassword)}
                         required
-                        style={{
-                            textTransform: 'none',
-                            WebkitTextTransform: 'none',
-                            MozTextTransform: 'none',
-                            msTransform: 'none',
-                            OTransform: 'none'
-                        }}
+                       
                     />
                 </div>
 
