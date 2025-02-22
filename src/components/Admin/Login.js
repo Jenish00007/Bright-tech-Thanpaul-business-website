@@ -15,7 +15,7 @@ const Login = () => {
         try {
             const response = { email: email, password: password, status: 200 };
 
-            if (email === "ADMIN" && password === "0000" && response.status === 200) {
+            if (email === "admin" && password === "0000" && response.status === 200) {
                 localStorage.setItem("auth", true);
                 navigate('/dashboard');
             } else {
