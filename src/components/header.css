@@ -74,6 +74,10 @@
     display: block; /* Show menu icon on mobile */
   }
 
+  .GoldRateCointainer{
+    display: none; 
+  }
+
   .toggleButton {
     display: block; 
     background-color: #444;
