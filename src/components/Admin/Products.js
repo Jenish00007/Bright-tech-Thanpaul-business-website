@@ -18,7 +18,7 @@ const Product = () => {
 
   const fetchProducts = async () => {
     try {
-      const response = await axios.get("https://thbackend.onrender.com/api/products");
+      const response = await axios.get("https://thbackend-lqde.onrender.com/api/products");
       setProducts(response.data);
       setFilteredProducts(response.data);
     } catch (error) {
@@ -31,7 +31,7 @@ const Product = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`https://thbackend.onrender.com/api/products/${id}`);
+      await axios.delete(`https://thbackend-lqde.onrender.com/api/products/${id}`);
       fetchProducts();
     } catch (error) {
       console.error("❌ Error deleting product:", error);

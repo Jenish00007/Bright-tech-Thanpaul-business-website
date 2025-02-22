@@ -4,7 +4,7 @@ export default function ProductList() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("https://thbackend.onrender.com/api/products") // Replace with actual API endpoint
+    fetch("https://thbackend-lqde.onrender.com/api/products") // Replace with actual API endpoint
       .then((response) => response.json())
       .then((data) => setProducts(data))
       .catch((error) => console.error("Error fetching products:", error));
