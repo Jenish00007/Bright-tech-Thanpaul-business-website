@@ -23,7 +23,7 @@ const AddProduct = () => {
         formData.append(key, newProduct[key]);
       });
 
-      await axios.post("https://thbackend.onrender.com/api/products", formData, {
+      await axios.post("https://thbackend-lqde.onrender.com/api/products", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
