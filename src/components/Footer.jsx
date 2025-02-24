@@ -34,7 +34,7 @@ const Footer = () => {
             <li><Link to="/CancellationPolicy" style={linkStyle}>Cancellation Policy</Link></li>
             <li><Link to="/RefundPolicy" style={linkStyle}>Refund Policy</Link></li>
             <li><Link to="/about" style={linkStyle}>About us</Link></li>
-            <li><Link to="/login" style={linkStyle}>Admin Login</Link></li>
+            <li><Link to="/dashboard" style={linkStyle}>Admin Login</Link></li>
           </ul>
         </div>
       </div>
