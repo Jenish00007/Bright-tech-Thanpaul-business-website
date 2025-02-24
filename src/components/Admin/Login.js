@@ -13,9 +13,14 @@ const Login = () => {
         setError('');
 
         try {
-            const response = { email: email, password: password, status: 200 };
+            // Convert both email and password to lowercase to make the comparison case-insensitive
+            const emailLower = email.toLowerCase();
+            const passwordLower = password.toLowerCase();
 
-            if (email === "admin" && password === "0000" && response.status === 200) {
+            // Simulate a response from the backend
+            const response = { email: "admin", password: "0000", status: 200 };
+
+            if (emailLower === "admin" && passwordLower === "0000" && response.status === 200) {
                 localStorage.setItem("auth", true);
                 navigate('/dashboard');
             } else {
@@ -25,7 +30,6 @@ const Login = () => {
             setError('Invalid credentials. Please try again.');
         }
     };
-
     // Function to handle input change while preserving case
     const handleInputChange = (e, setValue) => {
         const value = e.target.value;
