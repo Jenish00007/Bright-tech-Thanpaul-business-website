@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { useNavigate } from "react-router-dom"; 
 import "./Products.css";
 
 const AddProduct = () => {
@@ -12,12 +12,12 @@ const AddProduct = () => {
     description: "",
     image: null,
   });
-  const [successMessage, setSuccessMessage] = useState("");  // Track success message
-  const [errorMessage, setErrorMessage] = useState("");  // Track error message
-  const [uploadProgress, setUploadProgress] = useState(0); // Track upload progress
-  const [imageName, setImageName] = useState(""); // Track image file name
-  const [isUploading, setIsUploading] = useState(false); // Track if uploading is in progress
-  const navigate = useNavigate(); // Initialize the navigate function
+  const [successMessage, setSuccessMessage] = useState("");  
+  const [errorMessage, setErrorMessage] = useState("");  
+  const [uploadProgress, setUploadProgress] = useState(0); 
+  const [imageName, setImageName] = useState(""); 
+  const [isUploading, setIsUploading] = useState(false); 
+  const navigate = useNavigate(); 
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -27,17 +27,17 @@ const AddProduct = () => {
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     setNewProduct((prev) => ({ ...prev, image: file }));
-    setImageName(file.name); // Set image file name when file is selected
+    setImageName(file.name); 
   };
 
   const handleSave = async () => {
     try {
-      setIsUploading(true); // Set uploading to true when the upload starts
+      setIsUploading(true); 
 
       const formData = new FormData();
       Object.keys(newProduct).forEach((key) => {
         if (key === "image" && newProduct[key]) {
-          formData.append(key, newProduct[key]); // Append image file separately
+          formData.append(key, newProduct[key]); 
         } else {
           formData.append(key, newProduct[key]);
         }
@@ -46,30 +46,27 @@ const AddProduct = () => {
       await axios.post("https://thbackend-lqde.onrender.com/api/products", formData, {
         headers: { "Content-Type": "multipart/form-data" },
         onUploadProgress: (progressEvent) => {
-          // Calculate and set upload progress percentage
           const percentage = Math.round((progressEvent.loaded * 100) / progressEvent.total);
           setUploadProgress(percentage);
         },
       });
 
       setSuccessMessage("Product added successfully!");
-      setErrorMessage(""); // Clear error message if product is successfully added
-      setIsUploading(false); // Stop the "Uploading..." message after success
+      setErrorMessage(""); 
+      setIsUploading(false); 
 
-      // Reset form after successful save
       setNewProduct({ name: "", category: "", price: "", weight: "", description: "", image: null });
-      setImageName(""); // Clear image name after successful save
-      setUploadProgress(0); // Reset upload progress
-  // Refresh the page after success
-  setTimeout(() => {
-    window.location.reload(); // Refresh the current page
-  }, 1500); // Delay for success message display
-     
+      setImageName(""); 
+      setUploadProgress(0); 
+
+      setTimeout(() => {
+        window.location.reload(); 
+      }, 1500); 
+
     } catch (error) {
-      // Set error message if the request fails
       setErrorMessage("❌ Error saving product, please try again.");
-      setSuccessMessage(""); // Clear success message in case of error
-      setIsUploading(false); // Stop the "Uploading..." message on error
+      setSuccessMessage(""); 
+      setIsUploading(false); 
     }
   };
 
@@ -99,7 +96,7 @@ const AddProduct = () => {
           onChange={handleInputChange}
         />
         <input type="file" onChange={handleImageChange} />
-        {imageName && <p className="image-name">{`Selected File: ${imageName}`}</p>} {/* Display image name */}
+        {imageName && <p className="image-name">{`Selected File: ${imageName}`}</p>}
         
         {uploadProgress > 0 && uploadProgress < 100 && (
           <div className="progress-container">
@@ -107,12 +104,10 @@ const AddProduct = () => {
           </div>
         )}
 
-        {/* Show uploading message while uploading */}
         {isUploading && !successMessage && !errorMessage && (
           <p className="uploading-message">Product uploading, please wait...</p>
         )}
 
-        {/* Success or error message */}
         {successMessage && <p className="success-message">{successMessage}</p>}
         {errorMessage && <p className="error-message">{errorMessage}</p>}
 

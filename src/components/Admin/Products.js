@@ -4,6 +4,7 @@ import "./Products.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload, faEye, faPlus, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { CSVLink } from "react-csv";
+import { useNavigate } from "react-router-dom"; // Import navigate hook
 
 const Product = () => {
   const [products, setProducts] = useState([]);
@@ -11,6 +12,7 @@ const Product = () => {
  
   const [currentPage, setCurrentPage] = useState(1);
   const productsPerPage = 10;
+  const navigate = useNavigate(); // Initialize navigate
 
   useEffect(() => {
     fetchProducts();
@@ -26,9 +28,6 @@ const Product = () => {
     }
   };
 
- 
- 
-
   const handleDelete = async (id) => {
     try {
       await axios.delete(`https://thbackend-lqde.onrender.com/api/products/${id}`);
@@ -42,15 +41,32 @@ const Product = () => {
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
   const displayedProducts = filteredProducts.slice(indexOfFirstProduct, indexOfLastProduct);
 
+  // Navigate to the "Add Product" page
+  const handleAddProduct = () => {
+    navigate("/addproducts"); // Change this route according to your setup
+  };
+
+  // Navigate to the "View All Products" page
+  const handleViewAllProducts = () => {
+    navigate("/products"); // Change this route according to your setup
+  };
+
   return (
     <div>
-      
-      
-
       <div className="actionsbuttons">
         <CSVLink data={filteredProducts} filename={"products.csv"}>
-          <FontAwesomeIcon icon={faDownload} className="view-icon" /> Export CSV
+          <FontAwesomeIcon icon={faDownload} className="view-icon" />
         </CSVLink>
+
+        {/* Add Product Button */}
+      
+          <FontAwesomeIcon icon={faPlus} onClick={handleAddProduct} className="view-icon" />
+   
+      
+          <FontAwesomeIcon icon={faEye} onClick={handleViewAllProducts} className="view-icon" />
+        
+        {/* View All Products Button */}
+        
       </div>
 
       <table border="1">

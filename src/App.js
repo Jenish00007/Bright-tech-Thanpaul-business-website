@@ -18,6 +18,7 @@ import Orders from './components/Admin/Orders';
 import Notifications from './components/Admin/Notifications';
 import Login from "./components/Admin/Login";
 import ScrollToTop from "./components/scroll";
+import AddProduct from "./components/Admin/Addproduct";
 function App() {
  
   var auth = localStorage.getItem("auth");
@@ -59,6 +60,7 @@ function App() {
           <Route path="/users"  element={ <Users /> } />
         <Route path="/products" element={ <Products /> } />
         <Route path="/orders"  element={ <Orders /> } />
+ 
         
         </Routes>
         
