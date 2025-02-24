@@ -48,12 +48,7 @@ function App() {
           <Route path="/contact" element={<Contact />}/>
 
           {/* Admin Panel */}
-     
-          {/* 
-          <Route path="/dashboard" element={isAuthenticatedValue ? <Dashboard /> : <Navigate to="/login" />} />
-          <Route path="/users"  element={isAuthenticatedValue ? <Users /> : <Navigate to="/login" />} />
-        <Route path="/products" element={isAuthenticatedValue ? <Products /> : <Navigate to="/login" />} />
-        <Route path="/orders"  element={isAuthenticatedValue ? <Orders /> : <Navigate to="/login" />} /> */}
+
         <Route path="/notifications" element={<Notifications />} />
           <Route path="/login" element={<Login />}  />
           <Route path="/dashboard" element={<Dashboard /> } />

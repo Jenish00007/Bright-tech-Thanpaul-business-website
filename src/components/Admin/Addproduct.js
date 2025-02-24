@@ -31,7 +31,40 @@ const AddProduct = () => {
     setImageName(file.name); 
   };
 
+  const validateFields = () => {
+    // Check for missing fields
+    if (!newProduct.name || !newProduct.price || !newProduct.weight || !newProduct.image) {
+      setErrorMessage("All fields are required.");
+      return false;
+    }
+
+    // Validate price: Must be a positive number
+    if (isNaN(newProduct.price) || newProduct.price <= 0) {
+      setErrorMessage("Price must be a valid positive number.");
+      return false;
+    }
+
+    // Validate weight: Must be a positive integer representing grams
+    if (!Number.isInteger(Number(newProduct.weight)) || newProduct.weight <= 0) {
+      setErrorMessage("Weight must be a valid positive integer in grams.");
+      return false;
+    }
+
+    // Validate image file type
+    if (newProduct.image && !newProduct.image.type.startsWith("image/")) {
+      setErrorMessage("Please select a valid image file.");
+      return false;
+    }
+
+    setErrorMessage(""); // Clear previous errors
+    return true;
+  };
+
   const handleSave = async () => {
+    if (!validateFields()) {
+      return; // Exit if validation fails
+    }
+
     try {
       setIsUploading(true); 
 
@@ -90,9 +123,9 @@ const AddProduct = () => {
           onChange={handleInputChange}
         />
         <input
-          type="text"
+          type="number"
           name="weight"
-          placeholder="Weight"
+          placeholder="Weight (in grams)"
           value={newProduct.weight}
           onChange={handleInputChange}
         />
