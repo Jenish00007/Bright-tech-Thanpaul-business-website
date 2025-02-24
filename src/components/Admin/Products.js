@@ -53,20 +53,15 @@ const Product = () => {
 
   return (
     <div>
+      
       <div className="actionsbuttons">
         <CSVLink data={filteredProducts} filename={"products.csv"}>
           <FontAwesomeIcon icon={faDownload} className="view-icon" />
         </CSVLink>
-
         {/* Add Product Button */}
-      
-          <FontAwesomeIcon icon={faPlus} onClick={handleAddProduct} className="view-icon" />
-   
-      
+               <FontAwesomeIcon icon={faPlus} onClick={handleAddProduct} className="view-icon" />
           <FontAwesomeIcon icon={faEye} onClick={handleViewAllProducts} className="view-icon" />
-        
         {/* View All Products Button */}
-        
       </div>
 
       <table border="1">

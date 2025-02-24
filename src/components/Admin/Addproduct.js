@@ -17,6 +17,7 @@ const AddProduct = () => {
   const [uploadProgress, setUploadProgress] = useState(0); 
   const [imageName, setImageName] = useState(""); 
   const [isUploading, setIsUploading] = useState(false); 
+  
   const navigate = useNavigate(); 
 
   const handleInputChange = (e) => {
